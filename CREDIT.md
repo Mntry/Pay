@@ -4,8 +4,8 @@
 ###URL
 `POST` /credit/sale
 
-###Request Parameters (**bold** parameters required)
-| Parameter                     | Type    | Length  | Example       | Description                   |
+###Request Fields (**bold** fields required)
+| Field                         | Type    | Length  | Example       | Description                   |
 |-------------------------------|---------|-----|-------------------|-------------------------------|
 | **Account** <sup>1</sup>      | Numeric | 19  | 4242424242424242  | Account Number                |
 | **Expiration** <sup>1</sup>   | String  | 4   | 1220              | Expiration Date (MMYY)        |
@@ -22,8 +22,8 @@
 <sup>2</sup> Include this parameter for swiped account information.<br />
 <sup>3</sup> Include this parameter for tokenized card information.
 
-###Response Parameters
-| Parameter     | Type    | Length  | Example       | Description                           |
+###Response Fields
+| Field         | Type    | Length  | Example       | Description                           |
 |---------------|---------|-----|-------------------|---------------------------------------|
 | Status        | String  | 10  | Approved          | Transaction Status                    |
 | Account       | Numeric | 19  | XXXXXXXXXXXX4242  | Masked Account Number                 |
