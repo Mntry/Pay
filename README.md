@@ -1,12 +1,20 @@
-# Monetary Pay API
+# Getting Started with Monetary Pay API
 ###Authorization
 
-  Header: `Authorization: secretKEYGOESHERE`
+Authorization is easy, just insert your secret key in the `Authorization` header:
+
+`Authorization: secretKEYGOESHERE`
   
 ###Content Types
+Communicate with us in your favorite content type!
+
+We support the following for `Content-Type` and `Accepts` values:
+
 * `application/json`
 * `application/xml`
 * `x-www-url-encoded`
+
+##Transactions
 
 ###[Credit Transactions](../master/CREDIT.md)
 * Sale `POST /credit/sale`
@@ -25,7 +33,7 @@
 * ```401 UNAUTHORIZED``` Unauthorized Transaction
 * ```404 NOT FOUND``` Resource Not Found
 
-###Example Request
+###Example Sale Request
 
 ```
 POST https://pay.monetary.co/v1/credit/sale
@@ -41,17 +49,51 @@ Accept: application/json
 }
 ```
 
-###Example Response
+###Example Sale Response
 ```
 200 OK
 
 {
   "Status": "Approved",
-  "Description": "APPROVAL",
+  "Message": "APPROVAL",
   "Account": "XXXXXXXXXXXX4242",
   "Expiration": "XXXX",
   "Brand": "VISA",
   "RefNo": "123",
-  "Token": "card_1ABVDEFG2"
+  "Token": "card_1ABCDEFG2"
+}
+```
+
+##Using Tokens
+As you can see in the [example response above](#example-sale-response), every successful transaction response will include a `Token` which you can use in subsequent transactions for that account!
+
+For example, this is how we void the above example sale using the `RefNo` and `Token` it returned:
+
+###Example Void Request with Token
+
+```
+POST https://pay.monetary.co/v1/credit/sale/123/void
+
+Authorization: secretKEYGOESHERE
+Content-Type: application/json
+Accept: application/json
+
+{
+  "Token": "card_1ABCDEFG2"
+}
+```
+
+###Example Void Response with Token
+```
+200 OK
+
+{
+  "Status": "Approved",
+  "Message": "APPROVAL",
+  "Account": "XXXXXXXXXXXX4242",
+  "Expiration": "XXXX",
+  "Brand": "VISA",
+  "RefNo": "124",
+  "Token": "card_1ABCDEFG2"
 }
 ```
