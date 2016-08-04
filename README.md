@@ -10,9 +10,9 @@
 
 ###[Credit Transactions](../master/CREDIT.md)
 * Sale `/credit/sale`
-* Void Sale `/credit/sale/:id/void`
+* Void Sale `/credit/sale/:RefNo/void`
 * Return `/credit/return`
-* Void Return `/credit/return/:id/void`
+* Void Return `/credit/return/:RefNo/void`
 * Auth Only: `/credit/authonly`
 
 ###Success Responses
