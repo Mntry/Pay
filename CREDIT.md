@@ -33,3 +33,4 @@
 | Gratuity      | String  | 20  | 1.00              | Gratuity Amount                       |
 | Tax           | String  | 20  | 0.05              | Tax Amount                            |
 | InvoiceNo     | String  | 10  | 1234567890        | Echoed Unique Transaction Identifier  |
+| RefNo         | String  | 10  | 1234567890        | Transaction Reference Number          |
