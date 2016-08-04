@@ -67,7 +67,7 @@ Accept: application/json
 ##Using Tokens
 As you can see in the [example response above](#example-sale-response), every successful transaction response will include a `Token` which you can use in subsequent transactions for that account!
 
-For example, this is how we void the above example sale using the `RefNo` and `Token` it returned:
+For example, this is how to void the above example sale using the `RefNo` and `Token` it returned:
 
 ###Example Void Request with Token
 
