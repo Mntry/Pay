@@ -8,7 +8,7 @@
 * `application/xml`
 * `x-www-url-encoded`
 
-###[Credit Transactions](../blob/master/CREDIT.md)
+###[Credit Transactions](../master/CREDIT.md)
 * Sale `/credit/sale`
 * Void Sale `/credit/sale/:id/void`
 * Return `/credit/return`
