@@ -9,17 +9,19 @@
 * `x-www-url-encoded`
 
 ###[Credit Transactions](../master/CREDIT.md)
-* Sale `/credit/sale`
-* Void Sale `/credit/sale/:RefNo/void`
-* Return `/credit/return`
-* Void Return `/credit/return/:RefNo/void`
-* Auth Only: `/credit/authonly`
+* Sale `POST /credit/sale`
+* Void Sale `POST /credit/sale/:RefNo/void`
+* Adjust `PUT /credit/sale/:RefNo`
+* Return `POST /credit/return`
+* Void Return `POST /credit/return/:RefNo/void`
+* Auth Only: `POST /credit/authonly`
 
 ###Success Responses
 * ```200 OK``` Approved Transaction
 * ```402 PAYMENT REQUIRED``` Declined Transaction
 
 ###Failure Responses
+* ```400 BAD REQUEST``` Invalid Transaction Request
 * ```401 UNAUTHORIZED``` Unauthorized Transaction
 * ```404 NOT FOUND``` Resource Not Found
 
@@ -45,9 +47,11 @@ Accept: application/json
 
 {
   "Status": "Approved",
+  "Description": "APPROVAL",
   "Account": "XXXXXXXXXXXX4242",
   "Expiration": "XXXX",
   "Brand": "VISA",
-  "RefNo": "123"
+  "RefNo": "123",
+  "Token": "card_1ABVDEFG2"
 }
 ```
