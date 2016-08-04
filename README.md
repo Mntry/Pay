@@ -1,7 +1,7 @@
 # Monetary Pay API
 ###Authorization
 
-  Header: `Authorization: [Secret Key Goes Here]`
+  Header: `Authorization: secretKEYGOESHERE`
   
 ###Content Types
 * `application/json`
