@@ -1,4 +1,5 @@
-# Monetary Pay API
+# Monetary Pay API - Credit Transactions
+
 ## Credit Sale
 
 ###URL
