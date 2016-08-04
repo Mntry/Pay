@@ -28,7 +28,7 @@
 ###Example Request
 
 ```
-POST https://pay.monetary.co/v1/credit/return
+POST https://pay.monetary.co/v1/credit/sale
 
 Authorization: secretKEYGOESHERE
 Content-Type: application/json
