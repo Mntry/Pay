@@ -19,9 +19,9 @@
 | Tax                           | String  | 20  | 0.05              | Tax Amount                    |
 | InvoiceNo                     | String  | 10  | 1234567890        | Unique Transaction Identifier |
 
-<sup>1</sup> Include these parameters for manually entered account information.<br />
-<sup>2</sup> Include this parameter for swiped account information.<br />
-<sup>3</sup> Include this parameter for tokenized card information.
+<sup>1</sup> Include these fields for manually entered account information.<br />
+<sup>2</sup> Include this fields for swiped account information.<br />
+<sup>3</sup> Include this fields for tokenized card information.
 
 ###Response Fields
 | Field         | Type    | Length  | Example       | Description                           |
