@@ -9,7 +9,7 @@
 * [Auth Only](#auth-only)
 
 ### Responses
-* Response Fields
+* [Response Fields](#response-fields)
 
 ## Sale
 
