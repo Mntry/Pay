@@ -37,7 +37,7 @@
 <br />
 ## Void Sale
 
-`POST` /credit/sale/:RefNo/void
+`POST` /credit/sale/**{RefNo}**/void
 
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
@@ -48,7 +48,7 @@
 <br />
 ## Adjust
 
-`PUT` /credit/sale/**:RefNo**
+`PUT` /credit/sale/**{RefNo}**
 
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
@@ -84,7 +84,7 @@
 <br />
 ## Void Return
 
-`POST` /credit/return/**:RefNo**/void
+`POST` /credit/return/**{RefNo}**/void
 
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
