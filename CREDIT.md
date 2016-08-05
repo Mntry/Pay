@@ -47,7 +47,7 @@
 | **Purchase** <sup>1</sup>     | String  | 8   | Purchase Amount               | Body |
 | **Tip** <sup>1</sup>          | String  | 8   | Tip Amount                    | Body |
 
-<sup>1</sup> Include these fields for manually entered account information.<br />
+<sup>1</sup> Include an updated `Purchase` value, `Tip` value, or both.<br />
 
 <br />
 ## Return
