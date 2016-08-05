@@ -1,6 +1,6 @@
 # Monetary Pay API
 
-### Credit Transactions
+### Credit Transaction Requests
 * [Sale](#sale)
 * [Void Sale](#void-sale)
 * [Adjust](#adjust)
@@ -8,7 +8,7 @@
 * [Void Return](#void-return)
 * [Auth Only](#auth-only)
 
-### Responses
+### Credit Transaction Responses
 * [Response Fields](#response-fields)
 
 ## Sale
