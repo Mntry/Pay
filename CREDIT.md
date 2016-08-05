@@ -35,6 +35,21 @@
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 
 <br />
+## Adjust
+
+`PUT` /credit/sale/:RefNo
+
+###Request Fields (**bold** fields required)
+| Field                         | Type    | Max Length  | Description                   | Location |
+|-------------------------------|---------|-----|-------------------------------|----|
+| **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL:RefNo |
+| **Token**                     | String  | 20  | Monetary Token                | Body |
+| **Purchase** <sup>1</sup>     | String  | 8   | Purchase Amount               | Body |
+| **Tip** <sup>1</sup>          | String  | 8   | Tip Amount                    | Body |
+
+<sup>1</sup> Include these fields for manually entered account information.<br />
+
+<br />
 ## Return
 
 `POST` /credit/return
