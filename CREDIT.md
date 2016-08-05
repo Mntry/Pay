@@ -1,4 +1,15 @@
-# Monetary Pay API - Credit Transactions
+# Monetary Pay API
+
+### Credit Transactions
+* [Sale](#sale)
+* [Void Sale](#void-sale)
+* [Adjust](#adjust)
+* [Return](#return)
+* [Void Return](#void-return)
+* [Auth Only](#auth-only)
+
+### Responses
+* Response Fields
 
 ## Sale
 
@@ -82,7 +93,7 @@
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 
 <br />
-## AuthOnly
+## Auth Only
 
 `POST` /credit/authonly
 
