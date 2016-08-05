@@ -15,8 +15,7 @@
 | **Track2** <sup>2</sup>       | String  | 37  | trk               | Card Track2 (stripe)          |
 | **Token** <sup>3</sup>        | String  | 20  | otu_123456789     | Monetary Token                |
 | **Purchase**                  | String  | 8   | 1.00              | Purchase Amount               |
-| Gratuity                      | String  | 8   | 1.00              | Gratuity Amount               |
-| Tax                           | String  | 8   | 0.05              | Tax Amount                    |
+| Tip                           | String  | 8   | 1.00              | Gratuity Amount               |
 | InvoiceNo                     | String  | 10  | 1234567890        | Unique Transaction Identifier |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
@@ -30,7 +29,7 @@
 | Account       | Numeric | 19  | XXXXXXXXXXXX4242  | Masked Account Number                 |
 | Expiration    | String  | 4   | XXXX              | Masked Expiration Date                |
 | Purchase      | String  | 8   | 1.00              | Purchase Amount                       |
-| Gratuity      | String  | 8   | 1.00              | Gratuity Amount                       |
-| Tax           | String  | 8   | 0.05              | Tax Amount                            |
+| Tip           | String  | 8   | 1.00              | Gratuity Amount                       |
+| Authorized    | String  | 8   | 2.00              | Amount Authorized                     |
 | InvoiceNo     | String  | 10  | 1234567890        | Echoed Unique Transaction Identifier  |
 | RefNo         | String  | 10  | 1234567890        | Transaction Reference Number          |
