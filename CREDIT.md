@@ -8,8 +8,8 @@
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number           | Body |
-| **Expiration** <sup>1</sup>   | String  | 4   | Expiration Date (MMYY)        | Body |
-| CVV <sup>1</sup>              | String  | 4   | Account CVV                   | Body |
+| **Expiration** <sup>1</sup>   | String  | 4   | Card Expiration Date (MMYY)   | Body |
+| CVV <sup>1</sup>              | String  | 4   | Card Account CVV              | Body |
 | Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code           | Body |
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)     | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
@@ -44,10 +44,10 @@
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL:RefNo |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
-| **Purchase** <sup>1</sup>     | String  | 8   | Purchase Amount               | Body |
-| **Tip** <sup>1</sup>          | String  | 8   | Tip Amount                    | Body |
+| **Purchase** <sup>1</sup>     | String  | 8   | Updated Purchase Amount       | Body |
+| **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
 
-<sup>1</sup> Include an updated `Purchase` value, `Tip` value, or both.<br />
+<sup>1</sup> Include either or both of these fields.
 
 <br />
 ## Return
@@ -58,8 +58,8 @@
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number           | Body |
-| **Expiration** <sup>1</sup>   | String  | 4   | Expiration Date (MMYY)        | Body |
-| CVV <sup>1</sup>              | String  | 4   | Account CVV                   | Body |
+| **Expiration** <sup>1</sup>   | String  | 4   | Card Expiration Date (MMYY)   | Body |
+| CVV <sup>1</sup>              | String  | 4   | Card Account CVV              | Body |
 | Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code           | Body |
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)     | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
@@ -80,6 +80,30 @@
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL:RefNo |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
+
+<br />
+## AuthOnly
+
+`POST` /credit/authonly
+
+###Request Fields (**bold** fields required)
+| Field                         | Type    | Max Length  | Description                   | Location |
+|-------------------------------|---------|-----|-------------------------------|----|
+| **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number           | Body |
+| **Expiration** <sup>1</sup>   | String  | 4   | Card Expiration Date (MMYY)   | Body |
+| CVV <sup>1</sup>              | String  | 4   | Card Account CVV              | Body |
+| Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code           | Body |
+| **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)     | Body |
+| **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
+| **Purchase** <sup>4</sup>     | String  | 8   | Purchase Amount               | Body |
+| InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
+| AuthCode  <sup>5</sup>        | String  | 16  | Voice Authorization Code      | Body |
+
+<sup>1</sup> Include these fields for manually entered account information.<br />
+<sup>2</sup> Include this field for swiped account information.<br />
+<sup>3</sup> Include this field for tokenized card information.<br />
+<sup>4</sup> `Purchase` value may be `0.00` for a zero-dollar (card verification) authorization.<br />
+<sup>5</sup> Include this field for authorizations obtained from the voice authorization center.
 
 <br />
 ## Responses
