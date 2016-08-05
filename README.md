@@ -17,12 +17,12 @@ We support the following for `Content-Type` and `Accepts` values:
 ##Transactions
 
 ###[Credit Transactions](../master/CREDIT.md)
-* [Sale](CREDIT.MD#sale) `POST` /credit/sale
-* [Void Sale](CREDIT.MD#void-sale) `POST` /credit/sale/**{RefNo}**/void
-* [Adjust](CREDIT.MD#adjust) `PUT` /credit/sale/**{RefNo}**
-* [Return](CREDIT.MD#return) `POST` /credit/return
-* [Void Return](CREDIT.MD#void-return) `POST` /credit/return/**{RefNo}**/void
-* [Auth Only](CREDIT.MD#auth-only) `POST` /credit/authonly
+* [Sale](CREDIT.md#sale) `POST` /credit/sale
+* [Void Sale](CREDIT.md#void-sale) `POST` /credit/sale/**{RefNo}**/void
+* [Adjust](CREDIT.md#adjust) `PUT` /credit/sale/**{RefNo}**
+* [Return](CREDIT.md#return) `POST` /credit/return
+* [Void Return](CREDIT.md#void-return) `POST` /credit/return/**{RefNo}**/void
+* [Auth Only](CREDIT.md#auth-only) `POST` /credit/authonly
 
 ###Success Responses
 * ```200 OK``` Approved Transaction
