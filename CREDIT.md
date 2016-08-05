@@ -42,18 +42,18 @@
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
-| **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL:RefNo |
+| **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 
 <br />
 ## Adjust
 
-`PUT` /credit/sale/:RefNo
+`PUT` /credit/sale/**:RefNo**
 
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
-| **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL:RefNo |
+| **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 | **Purchase** <sup>1</sup>     | String  | 8   | Updated Purchase Amount       | Body |
 | **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
@@ -84,12 +84,12 @@
 <br />
 ## Void Return
 
-`POST` /credit/return/:RefNo/void
+`POST` /credit/return/**:RefNo**/void
 
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
-| **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL:RefNo |
+| **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 
 <br />
