@@ -2,13 +2,12 @@
 
 ## Sale
 
-###URL
 `POST` /credit/sale
 
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
-| **Account** <sup>1</sup>      | Numeric | 19  | Account Number                | Body |
+| **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number           | Body |
 | **Expiration** <sup>1</sup>   | String  | 4   | Expiration Date (MMYY)        | Body |
 | CVV <sup>1</sup>              | String  | 4   | Account CVV                   | Body |
 | Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code           | Body |
@@ -17,14 +16,16 @@
 | **Purchase**                  | String  | 8   | Purchase Amount               | Body |
 | Tip                           | String  | 8   | Tip Amount                    | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
+| AuthCode  <sup>4</sup>        | String  | 16  | Voice Authorization Code      | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
-<sup>2</sup> Include this fields for swiped account information.<br />
-<sup>3</sup> Include this fields for tokenized card information.
+<sup>2</sup> Include this field for swiped account information.<br />
+<sup>3</sup> Include this field for tokenized card information.<br />
+<sup>4</sup> Include this field for authorizations obtained from the voice authorization center.
 
+<br />
 ## Void Sale
 
-###URL
 `POST` /credit/sale/:RefNo/void
 
 ###Request Fields (**bold** fields required)
@@ -33,7 +34,39 @@
 | **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL:RefNo |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 
+<br />
+## Return
 
+`POST` /credit/return
+
+###Request Fields (**bold** fields required)
+| Field                         | Type    | Max Length  | Description                   | Location |
+|-------------------------------|---------|-----|-------------------------------|----|
+| **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number           | Body |
+| **Expiration** <sup>1</sup>   | String  | 4   | Expiration Date (MMYY)        | Body |
+| CVV <sup>1</sup>              | String  | 4   | Account CVV                   | Body |
+| Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code           | Body |
+| **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)     | Body |
+| **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
+| **Purchase**                  | String  | 8   | Purchase Amount               | Body |
+| InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
+
+<sup>1</sup> Include these fields for manually entered account information.<br />
+<sup>2</sup> Include this field for swiped account information.<br />
+<sup>3</sup> Include this field for tokenized card information.
+
+<br />
+## Void Return
+
+`POST` /credit/return/:RefNo/void
+
+###Request Fields (**bold** fields required)
+| Field                         | Type    | Max Length  | Description                   | Location |
+|-------------------------------|---------|-----|-------------------------------|----|
+| **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL:RefNo |
+| **Token**                     | String  | 20  | Monetary Token                | Body |
+
+<br />
 ## Responses
 
 Credit transaction response bodies will include the following fields:
@@ -42,8 +75,8 @@ Credit transaction response bodies will include the following fields:
 | Field         | Type    | Max Length  | Description                           |
 |---------------|---------|-----|---------------------------------------|
 | Status        | String  | 10  | Transaction Status                    |
-| Account       | Numeric | 19  | Masked Account Number                 |
-| Expiration    | String  | 4   | Masked Expiration Date                |
+| Account       | Numeric | 19  | Masked Card Account Number            |
+| Expiration    | String  | 4   | Masked Card Expiration Date           |
 | Brand         | String  | 4   | Card Brand                            |
 | Purchase      | String  | 8   | Purchase Amount                       |
 | Tip           | String  | 8   | Tip Amount                            |
