@@ -122,14 +122,18 @@
 Credit transaction response bodies will include the following fields:
 
 ###Response Fields
-| Field         | Type    | Max Length  | Description                           |
+| Field         | Type    | Max Length  | Description                   |
 |---------------|---------|-----|---------------------------------------|
-| Status        | String  | 10  | Transaction Status                    |
+| Status <sup>1</sup>        | String  | 10  | Transaction Status                    |
 | Account       | Numeric | 19  | Masked Card Account Number            |
 | Expiration    | String  | 4   | Masked Card Expiration Date           |
-| Brand         | String  | 4   | Card Brand                            |
+| Brand <sup>2</sup>         | String  | 4   | Card Brand                            |
 | Purchase      | String  | 8   | Purchase Amount                       |
 | Tip           | String  | 8   | Tip Amount                            |
 | Authorized    | String  | 8   | Amount Authorized                     |
 | InvoiceNo     | String  | 10  | Echoed Unique Transaction Identifier  |
-| RefNo         | String  | 10  | Transaction Reference Number          |
+| RefNo <sup>3</sup>        | String  | 10  | Transaction Reference Number          |
+
+<sup>1</sup> `Status` values: `Approved`, `Declined`, `Success`, or `Error`<br />
+<sup>2</sup> `Brand` values: `VISA`, `M/C`, `DCVR`, `AMEX`, `DCLB`, `JCB`, or `OTHER`<br />
+<sup>3</sup> Store `RefNo` value for follow-up transaction use.
