@@ -17,17 +17,18 @@
 
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
-|-------------------------------|---------|-----|-------------------------------|----|
-| **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number           | Body |
-| **Expiration** <sup>1</sup>   | String  | 4   | Card Expiration Date (MMYY)   | Body |
-| CVV <sup>1</sup>              | String  | 4   | Card Account CVV              | Body |
-| Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code           | Body |
-| **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)     | Body |
-| **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
-| **Purchase**                  | String  | 8   | Purchase Amount               | Body |
-| Tip                           | String  | 8   | Tip Amount                    | Body |
-| InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
-| AuthCode  <sup>4</sup>        | String  | 16  | Voice Authorization Code      | Body |
+|-------------------------------|---------|-----|--------------------------------|------|
+| **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number            | Body |
+| **Expiration** <sup>1</sup>   | String  | 4   | Card Expiration Date (MMYY)    | Body |
+| CVV <sup>1</sup>              | String  | 4   | Card Account CVV               | Body |
+| Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code            | Body |
+| **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)      | Body |
+| **Token** <sup>3</sup>        | String  | 20  | Monetary Token                 | Body |
+| **Purchase**                  | String  | 8   | Purchase Amount                | Body |
+| Tip                           | String  | 8   | Tip Amount                     | Body |
+| InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
+| AuthCode  <sup>4</sup>        | String  | 16  | Voice Authorization Code       | Body |
+| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
@@ -57,6 +58,7 @@
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 | **Purchase** <sup>1</sup>     | String  | 8   | Updated Purchase Amount       | Body |
 | **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
+| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
 <sup>1</sup> Include either or both of these fields.
 
@@ -76,6 +78,7 @@
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
 | **Purchase**                  | String  | 8   | Purchase Amount               | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
+| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
@@ -109,6 +112,7 @@
 | **Purchase** <sup>4</sup>     | String  | 8   | Purchase Amount               | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
 | AuthCode  <sup>5</sup>        | String  | 16  | Voice Authorization Code      | Body |
+| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
