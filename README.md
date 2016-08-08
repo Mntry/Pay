@@ -24,6 +24,10 @@ We support the following for `Content-Type` and `Accepts` values:
 * [Void Return](CREDIT.md#void-return) `POST` /credit/return/**{RefNo}**/void
 * [Auth Only](CREDIT.md#auth-only) `POST` /credit/authonly
 
+###[Debit Transactions](../master/DEBIT.md)
+* [Sale](DEBIT.md#sale) `POST` /debit/sale
+* [Return](DEBIT.md#return) `POST` /debit/return
+
 ###Success Responses
 * ```200 OK``` Approved Transaction
 * ```402 PAYMENT REQUIRED``` Declined Transaction
