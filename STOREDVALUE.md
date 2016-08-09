@@ -19,11 +19,11 @@
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
-| **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number            | Body |
-| CVV <sup>1</sup>              | String  | 4   | Card Account CVV               | Body |
-| **Track2** <sup>2</sup>       | String  | 50  | Card Track2 Data (stripe)      | Body |
+| **Account** <sup>1</sup>      | Numeric | 19  | Account Number                 | Body |
+| CVV <sup>1</sup>              | String  | 4   | Account CVV                    | Body |
+| **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)           | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier   | Body |
-| **Amount**                    | Numeric | 8   | Transaction Amount                | Body |
+| **Amount**                    | Numeric | 8   | Transaction Amount             | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV           | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
@@ -54,9 +54,9 @@
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
-| **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number            | Body |
-| CVV <sup>1</sup>              | String  | 4   | Card Account CVV               | Body |
-| **Track2** <sup>2</sup>       | String  | 50  | Card Track2 Data (stripe)      | Body |
+| **Account** <sup>1</sup>      | Numeric | 19  | Account Number            | Body |
+| CVV <sup>1</sup>              | String  | 4   | Account CVV               | Body |
+| **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)      | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier   | Body |
 | **Amount**                    | Numeric | 8   | Transaction Amount             | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV           | Body |
@@ -89,9 +89,9 @@
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
-| **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number            | Body |
-| CVV <sup>1</sup>              | String  | 4   | Card Account CVV               | Body |
-| **Track2** <sup>2</sup>       | String  | 50  | Card Track2 Data (stripe)      | Body |
+| **Account** <sup>1</sup>      | Numeric | 19  | Account Number            | Body |
+| CVV <sup>1</sup>              | String  | 4   | Account CVV               | Body |
+| **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)      | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier   | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV           | Body |
 
@@ -125,9 +125,9 @@
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description              | Location |
 |-------------------------------|---------|-----|----------------------------------|------|
-| **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number              | Body |
-| CVV <sup>1</sup>              | String  | 4   | Card Account CVV                 | Body |
-| **Track2** <sup>2</sup>       | String  | 50  | Card Track2 Data (stripe)        | Body |
+| **Account** <sup>1</sup>      | Numeric | 19  | Account Number              | Body |
+| CVV <sup>1</sup>              | String  | 4   | Account CVV                 | Body |
+| **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)        | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier     | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV             | Body |
 | NewIdentifier                 | String  | 30  | New Account Alternate Identifier | Body |
@@ -146,10 +146,10 @@ Stored Value transaction response bodies include the following fields:
 ###Response Fields
 | Field         | Type    | Max Length  | Description                   |
 |---------------|---------|-----|---------------------------------------|
-| Status <sup>1</sup> | String  | 50  | Transaction Status       |
+| Status <sup>1</sup> | String  | 50  | Transaction Status              |
 | Message       | String  | 50 | Response Message                       |
-| Account       | Numeric | 19 | Masked Card Account Number             |
-| CVV           | String  | 4  | Card Account CVV                       |
+| Account       | Numeric | 19 | Account Number                         |
+| CVV           | String  | 4  | Account CVV                            |
 | Identifier    | String  | 30 | Account Alternate Identifier           |
 | Amount        | Numeric | 8  | Transaction Amount                     |
 | Balance       | Numeric | 8  | Account Balance                        |
@@ -163,6 +163,4 @@ Stored Value transaction response bodies include the following fields:
 | Voided        | Boolean |    | Transaction Voided                     |
 | Code          | String  | 10 | Account Code                           |
 
-<sup>1</sup> `Status` values: `Approved`, `Declined`, `Success`, or `Error`<br />
-<sup>2</sup> `Brand` values: `Debit`<br />
-<sup>3</sup> Store `RefNo` value for follow-up transaction use.
+<sup>1</sup> `Status` values: `Approved`, `Duplicate`, `Declined`, or `Error`<br />
