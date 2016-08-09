@@ -109,7 +109,7 @@ Accept: application/json
   "Expiration": "XXXX",
   "Brand": "VISA",
   "RefNo": "124",
-  "Purchase": "1.00",
+  "Amount": "1.00",
   "Authorized": "1.00",
   "Token": "card_1ABCDEFG2"
 }
