@@ -56,7 +56,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "Purchase": "1.00",
+  "Amount": "1.00",
   "Account": "4242424242424242",
   "Expiration": "1220"
 }
@@ -73,7 +73,7 @@ Accept: application/json
   "Expiration": "XXXX",
   "Brand": "VISA",
   "RefNo": "123",
-  "Purchase": "1.00",
+  "Amount": "1.00",
   "Authorized": "1.00",
   "Token": "card_1ABCDEFG2"
 }
