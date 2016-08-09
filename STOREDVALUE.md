@@ -20,14 +20,13 @@
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Account Number                 | Body |
-| CVV <sup>1</sup>              | String  | 3   | Account CVV                    | Body |
+| **CVV** <sup>1</sup>              | String  | 3   | Account CVV                    | Body |
 | **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)           | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier   | Body |
 | **Amount**                    | Numeric | 8   | Transaction Amount             | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV           | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
-| AdjustPoints                  | Numeric | 11  | Adjust Points Balance Amount   | Body |
 | Promo                         | Boolean |     | Promotional Load               | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
@@ -43,7 +42,7 @@
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
-| **RefNo**                     | String  | 19  | Transaction RefNo to Void      | URL |
+| **RefNo**                     | Numeric  | 19  | Transaction RefNo to Void      | URL |
 
 <br />
 
@@ -55,15 +54,13 @@
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Account Number            | Body |
-| CVV <sup>1</sup>              | String  | 3   | Account CVV               | Body |
+| **CVV** <sup>1</sup>              | String  | 3   | Account CVV               | Body |
 | **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)      | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier   | Body |
 | **Amount**                    | Numeric | 8   | Transaction Amount             | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV           | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
-| AdjustPoints                  | Numeric | 11  | Adjust Points Balance Amount   | Body |
-| NoNSF                         | Boolean |     | No Non-Sufficient Funds        | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
@@ -78,7 +75,7 @@
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
-| **RefNo**                     | String  | 19  | Transaction RefNo to Void      | URL |
+| **RefNo**                     | Numeric  | 19  | Transaction RefNo to Void      | URL |
 
 <br />
 
@@ -90,7 +87,7 @@
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Account Number            | Body |
-| CVV <sup>1</sup>              | String  | 3   | Account CVV               | Body |
+| **CVV** <sup>1</sup>              | String  | 3   | Account CVV               | Body |
 | **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)      | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier   | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV           | Body |
@@ -109,11 +106,9 @@
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | Amount                        | Numeric | 8   | Transaction Amount             | Body |
-| **Identifier**                | String  | 30  | Account Alternate Identifier   | Body |
 | NewIdentifier                 | String  | 30  | New Account Alternate Identifier | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
-| AdjustPoints                  | Numeric | 11  | Adjust Points Balance Amount   | Body |
-| Promo                         | Boolean |     | Promotional Load               | Body |
+| Promo                         | Boolean |     | Promotional Create               | Body |
 | Lock                          | Boolean |     | Account Lock                   | Body |
 
 <br />
@@ -126,16 +121,17 @@
 | Field                         | Type    | Max Length  | Description              | Location |
 |-------------------------------|---------|-----|----------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Account Number              | Body |
-| CVV <sup>1</sup>              | String  | 3   | Account CVV                 | Body |
+| **CVV** <sup>1</sup>              | String  | 3   | Account CVV                 | Body |
 | **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)        | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier     | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV             | Body |
-| NewIdentifier                 | String  | 30  | New Account Alternate Identifier | Body |
-| Lock                          | Boolean |     | Account Lock                     | Body |
+| NewIdentifier <sup>4</sup>     | String  | 30  | New Account Alternate Identifier | Body |
+| Lock <sup>4</sup>              | Boolean |     | Account Lock                     | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
-<sup>3</sup> Include this field alternate identifier account information.
+<sup>3</sup> Include this field alternate identifier account information.<br />
+<sup>4</sup> Must include one or both of these fields.
 
 <br />
 
@@ -153,14 +149,12 @@ Stored Value transaction response bodies include the following fields:
 | Identifier    | String  | 30 | Account Alternate Identifier           |
 | Amount        | Numeric | 8  | Transaction Amount                     |
 | Balance       | Numeric | 8  | Account Balance                        |
-| AdjustPoints  | Numeric | 11 | Adjust Points Amount                   |
-| Points        | Numeric | 11 | Points Balance                         |
 | RefNo         | String  | 19 | Transaction RefNo                      |
-| InvoiceNo     | String  | 16 | Unique Transaction Identifier          |
-| AdjustPoints  | Numeric | 11 | Adjust Points Balance Amount           |
+| InvoiceNo     | String  | 10 | Unique Transaction Identifier          |
 | Promo         | Boolean |    | Promotional Load                       |
 | Lock          | Boolean |    | Account Locked                         |
 | Voided        | Boolean |    | Transaction Voided                     |
-| Code          | String  | 10 | Account Code                           |
+| Code <sup>2</sup> | String  | 10 | Account Short Code                 |
 
 <sup>1</sup> `Status` values: `Approved`, `Duplicate`, `Declined`, or `Error`<br />
+<sup>2</sup> Only returned upon (Create)[#create].
