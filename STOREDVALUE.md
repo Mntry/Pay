@@ -157,4 +157,4 @@ Stored Value transaction response bodies include the following fields:
 | Code <sup>2</sup> | String  | 10 | Account Short Code                 |
 
 <sup>1</sup> `Status` values: `Approved`, `Duplicate`, `Declined`, or `Error`<br />
-<sup>2</sup> Only returned upon (Create)[#create].
+<sup>2</sup> Only returned upon [Create](#create).
