@@ -43,7 +43,7 @@
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
-| **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL |
+| **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 
 <br />
@@ -54,7 +54,7 @@
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
-| **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL  |
+| **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 | **Purchase** <sup>1</sup>     | String  | 8   | Updated Purchase Amount       | Body |
 | **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
@@ -92,7 +92,7 @@
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
-| **RefNo**                     | String  | 10  | Transaction RefNo to Void     | URL  |
+| **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 
 <br />
@@ -136,7 +136,7 @@ Credit transaction response bodies will include the following fields:
 | Tip           | String  | 8   | Tip Amount                            |
 | Authorized    | String  | 8   | Amount Authorized                     |
 | InvoiceNo     | String  | 10  | Echoed Unique Transaction Identifier  |
-| RefNo <sup>3</sup>        | String  | 10  | Transaction Reference Number          |
+| RefNo <sup>3</sup>        | String  | 19  | Transaction Reference Number          |
 
 <sup>1</sup> `Status` values: `Approved`, `Declined`, `Success`, or `Error`<br />
 <sup>2</sup> `Brand` values: `VISA`, `M/C`, `DCVR`, `AMEX`, `DCLB`, `JCB`, or `OTHER`<br />
