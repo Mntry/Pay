@@ -128,10 +128,11 @@ Credit transaction response bodies will include the following fields:
 ###Response Fields
 | Field         | Type    | Max Length  | Description                   |
 |---------------|---------|-----|---------------------------------------|
-| Status <sup>1</sup>        | String  | 10  | Transaction Status                    |
+| Status <sup>1</sup>        | String  | 10  | Transaction Status       |
+| Message       | String  | 40  | Response Message                      |
 | Account       | Numeric | 19  | Masked Card Account Number            |
 | Expiration    | String  | 4   | Masked Card Expiration Date           |
-| Brand <sup>2</sup>         | String  | 4   | Card Brand                            |
+| Brand <sup>2</sup>         | String  | 4   | Card Brand               |
 | Amount        | String  | 8   | Transaction Amount                    |
 | Tip           | String  | 8   | Tip Amount                            |
 | Authorized    | String  | 8   | Amount Authorized                     |
