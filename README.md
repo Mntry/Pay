@@ -46,7 +46,7 @@ We support the following for `Content-Type` and `Accepts` values:
 * ```401 UNAUTHORIZED``` Unauthorized Transaction
 * ```404 NOT FOUND``` Resource Not Found
 
-###Example Sale Request
+###Example Credit Sale Request
 
 ```
 POST https://pay.monetary.co/v1/credit/sale
@@ -62,7 +62,7 @@ Accept: application/json
 }
 ```
 
-###Example Sale Response
+###Example Credit Sale Response
 ```
 200 OK
 
@@ -84,7 +84,7 @@ As you can see in the [example response above](#example-sale-response), every su
 
 For example, this is how to void the above example sale using the `RefNo` and `Token` it returned:
 
-###Example Void Request with Token
+###Example Credit Void Request with Token
 
 ```
 POST https://pay.monetary.co/v1/credit/sale/123/void
@@ -98,7 +98,7 @@ Accept: application/json
 }
 ```
 
-###Example Void Response with Token
+###Example Credit Void Response with Token
 ```
 200 OK
 
