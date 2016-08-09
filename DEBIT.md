@@ -17,7 +17,7 @@
 | **Track2**                    | String  | 37  | Card Track2 Data (stripe)      | Body |
 | **DerivedKey**                | String  | 20  | Debit Derived Key              | Body |
 | **PINBlock**                  | String  | 20  | Debit PIN Block                | Body |
-| **Purchase**                  | String  | 8   | Purchase Amount                | Body |
+| **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
@@ -32,7 +32,7 @@
 | **Track2**                    | String  | 37  | Card Track2 Data (stripe)      | Body |
 | **DerivedKey**                | String  | 20  | Debit Derived Key              | Body |
 | **PINBlock**                  | String  | 20  | Debit PIN Block                | Body |
-| **Purchase**                  | String  | 8   | Purchase Amount                | Body |
+| **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
@@ -49,7 +49,7 @@ Debit transaction response bodies will include the following fields:
 | Account       | Numeric | 19  | Masked Card Account Number            |
 | Expiration    | String  | 4   | Masked Card Expiration Date           |
 | Brand <sup>2</sup>         | String  | 4   | Card Brand                            |
-| Purchase      | String  | 8   | Purchase Amount                       |
+| Amount      | String  | 8   | Transaction Amount                       |
 | Authorized    | String  | 8   | Amount Authorized                     |
 | InvoiceNo     | String  | 10  | Echoed Unique Transaction Identifier  |
 | RefNo <sup>3</sup>        | String  | 10  | Transaction Reference Number          |
