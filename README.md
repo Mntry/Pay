@@ -24,6 +24,10 @@ We support the following for `Content-Type` and `Accepts` values:
 * [Void Return](CREDIT.md#void-return) `POST` /credit/return/**{RefNo}**/void
 * [Auth Only](CREDIT.md#auth-only) `POST` /credit/authonly
 
+###[Debit Transactions](DEBIT.md)
+* [Sale](DEBIT.md#sale) `POST` /debit/sale
+* [Return](DEBIT.md#return) `POST` /debit/return
+
 ###[Stored Value Transactions](STOREDVALUE.md)
 * [Load](STOREDVALUE.md#load) `POST` /storedvalue/load
 * [Void Load](STOREDVALUE.md#void-load) `POST` /storedvalue/load/**{RefNo}**/void
@@ -32,10 +36,6 @@ We support the following for `Content-Type` and `Accepts` values:
 * [Balance](STOREDVALUE.md#balance) `POST` /storedvalue/balance
 * [Create](STOREDVALUE.md#create) `POST` /storedvalue/create
 * [Set](STOREDVALUE.md#set) `POST` /storedvalue/set
-
-###[Debit Transactions](DEBIT.md)
-* [Sale](DEBIT.md#sale) `POST` /debit/sale
-* [Return](DEBIT.md#return) `POST` /debit/return
 
 ###Success Responses
 * ```200 OK``` Approved Transaction
