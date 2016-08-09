@@ -24,7 +24,7 @@
 | Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code            | Body |
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)      | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                 | Body |
-| **Purchase**                  | String  | 8   | Purchase Amount                | Body |
+| **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | Tip                           | String  | 8   | Tip Amount                     | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | AuthCode  <sup>4</sup>        | String  | 16  | Voice Authorization Code       | Body |
@@ -56,9 +56,9 @@
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
-| **Purchase** <sup>1</sup>     | String  | 8   | Updated Purchase Amount       | Body |
+| **Amount** <sup>1</sup>       | String  | 8   | Updated Transaction Amount    | Body |
 | **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
-| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
+| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
 
 <sup>1</sup> Include either or both of these fields.
 
@@ -76,7 +76,7 @@
 | Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code           | Body |
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)     | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
-| **Purchase**                  | String  | 8   | Purchase Amount               | Body |
+| **Amount**                    | String  | 8   | Transaction Amount            | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
@@ -109,7 +109,7 @@
 | Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code           | Body |
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)     | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
-| **Purchase** <sup>4</sup>     | String  | 8   | Purchase Amount               | Body |
+| **Amount** <sup>4</sup>       | String  | 8   | Transaction Amount            | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
 | AuthCode  <sup>5</sup>        | String  | 16  | Voice Authorization Code      | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
@@ -117,7 +117,7 @@
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
-<sup>4</sup> `Purchase` value may be `0.00` for a zero-dollar (card verification) authorization.<br />
+<sup>4</sup> `Amount` value may be `0.00` for a zero-dollar (card verification) authorization.<br />
 <sup>5</sup> Include this field for authorizations obtained from the voice authorization center.
 
 <br />
@@ -132,7 +132,7 @@ Credit transaction response bodies will include the following fields:
 | Account       | Numeric | 19  | Masked Card Account Number            |
 | Expiration    | String  | 4   | Masked Card Expiration Date           |
 | Brand <sup>2</sup>         | String  | 4   | Card Brand                            |
-| Purchase      | String  | 8   | Purchase Amount                       |
+| Amount        | String  | 8   | Transaction Amount                    |
 | Tip           | String  | 8   | Tip Amount                            |
 | Authorized    | String  | 8   | Amount Authorized                     |
 | InvoiceNo     | String  | 10  | Echoed Unique Transaction Identifier  |
