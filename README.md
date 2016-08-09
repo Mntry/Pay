@@ -16,7 +16,7 @@ We support the following for `Content-Type` and `Accepts` values:
 
 ##Transactions
 
-###[Credit Transactions](../master/CREDIT.md)
+###[Credit Transactions](CREDIT.md)
 * [Sale](CREDIT.md#sale) `POST` /credit/sale
 * [Void Sale](CREDIT.md#void-sale) `POST` /credit/sale/**{RefNo}**/void
 * [Adjust](CREDIT.md#adjust) `PUT` /credit/sale/**{RefNo}**
@@ -24,7 +24,16 @@ We support the following for `Content-Type` and `Accepts` values:
 * [Void Return](CREDIT.md#void-return) `POST` /credit/return/**{RefNo}**/void
 * [Auth Only](CREDIT.md#auth-only) `POST` /credit/authonly
 
-###[Debit Transactions](../master/DEBIT.md)
+###[Stored Value Transactions](STOREDVALUE.md)
+* [Load](STOREDVALUE.md#load) `POST` /storedvalue/load
+* [Void Load](STOREDVALUE.md#void-load) `POST` /storedvalue/load/**{RefNo}**/void
+* [Sale](STOREDVALUE.md#sale) `POST` /storedvalue/sale
+* [Void Sale](STOREDVALUE.md#void-sale) `POST` /storedvalue/sale/**{RefNo}**/void
+* [Balance](STOREDVALUE.md#balance) `POST` /storedvalue/balance
+* [Create](STOREDVALUE.md#create) `POST` /storedvalue/create
+* [Set](STOREDVALUE.md#set) `POST` /storedvalue/set
+
+###[Debit Transactions](DEBIT.md)
 * [Sale](DEBIT.md#sale) `POST` /debit/sale
 * [Return](DEBIT.md#return) `POST` /debit/return
 
