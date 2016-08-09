@@ -109,7 +109,7 @@
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | Amount                        | Numeric | 8   | Transaction Amount             | Body |
-| **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier   | Body |
+| **Identifier**                | String  | 30  | Account Alternate Identifier   | Body |
 | NewIdentifier                 | String  | 30  | New Account Alternate Identifier | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | AdjustPoints                  | Numeric | 11  | Adjust Points Balance Amount   | Body |
@@ -146,14 +146,22 @@ Stored Value transaction response bodies include the following fields:
 ###Response Fields
 | Field         | Type    | Max Length  | Description                   |
 |---------------|---------|-----|---------------------------------------|
-| Status <sup>1</sup>        | String  | 10  | Transaction Status                    |
-| Account       | Numeric | 19  | Masked Card Account Number            |
-| Expiration    | String  | 4   | Masked Card Expiration Date           |
-| Brand <sup>2</sup>         | String  | 4   | Card Brand                            |
-| Purchase      | String  | 8   | Purchase Amount                       |
-| Authorized    | String  | 8   | Amount Authorized                     |
-| InvoiceNo     | String  | 10  | Echoed Unique Transaction Identifier  |
-| RefNo <sup>3</sup>        | String  | 10  | Transaction Reference Number          |
+| Status <sup>1</sup> | String  | 50  | Transaction Status       |
+| Message       | String  | 50 | Response Message                       |
+| Account       | Numeric | 19 | Masked Card Account Number             |
+| CVV           | String  | 4  | Card Account CVV                       |
+| Identifier    | String  | 30 | Account Alternate Identifier           |
+| Amount        | Numeric | 8  | Transaction Amount                     |
+| Balance       | Numeric | 8  | Account Balance                        |
+| AdjustPoints  | Numeric | 11 | Adjust Points Amount                   |
+| Points        | Numeric | 11 | Points Balance                         |
+| RefNo         | String  | 19 | Transaction RefNo                      |
+| InvoiceNo     | String  | 16 | Unique Transaction Identifier          |
+| AdjustPoints  | Numeric | 11 | Adjust Points Balance Amount           |
+| Promo         | Boolean |    | Promotional Load                       |
+| Lock          | Boolean |    | Account Locked                         |
+| Voided        | Boolean |    | Transaction Voided                     |
+| Code          | String  | 10 | Account Code                           |
 
 <sup>1</sup> `Status` values: `Approved`, `Declined`, `Success`, or `Error`<br />
 <sup>2</sup> `Brand` values: `Debit`<br />
