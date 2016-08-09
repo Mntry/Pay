@@ -5,6 +5,9 @@
 * [Void Load](#void-load)
 * [Sale](#sale)
 * [Void Sale](#void-sale)
+* [Balance](#balance)
+* [Create](#create)
+* [Set](#set)
 
 ### Stored Value Transaction Responses
 * [Response Fields](#response-fields)
