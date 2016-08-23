@@ -133,6 +133,7 @@ Credit transaction response bodies will include the following fields:
 | Account       | Numeric | 19  | Masked Card Account Number            |
 | Expiration    | String  | 4   | Masked Card Expiration Date           |
 | Brand <sup>2</sup>         | String  | 4   | Card Brand               |
+| AuthCode      | String  | 16  | Authorization Code                    |
 | Amount        | String  | 8   | Transaction Amount                    |
 | Tip           | String  | 8   | Tip Amount                            |
 | Authorized    | String  | 8   | Amount Authorized                     |
