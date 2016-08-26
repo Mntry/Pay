@@ -31,7 +31,7 @@
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
-<sup>3</sup> Include this field alternate identifier account information.
+<sup>3</sup> Include this field for alternate identifier account information.
 
 <br />
 
@@ -64,7 +64,7 @@
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
-<sup>3</sup> Include this field alternate identifier account information.
+<sup>3</sup> Include this field for alternate identifier account information.
 
 <br />
 
@@ -94,7 +94,7 @@
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
-<sup>3</sup> Include this field alternate identifier account information.
+<sup>3</sup> Include this field for alternate identifier account information.
 
 <br />
 
@@ -130,7 +130,7 @@
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
-<sup>3</sup> Include this field alternate identifier account information.<br />
+<sup>3</sup> Include this field for alternate identifier account information.<br />
 <sup>4</sup> Must include one or both of these fields.
 
 <br />
