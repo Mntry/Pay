@@ -127,6 +127,7 @@
 | OverrideCVV                   | Boolean |     | Override Account CVV             | Body |
 | NewIdentifier <sup>4</sup>     | String  | 30  | New Account Alternate Identifier | Body |
 | Lock <sup>4</sup>              | Boolean |     | Account Lock                     | Body |
+| CreditLimit <sup>4</sup>      | Numeric |  8  | Enable Credit and Set Limit      | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
@@ -155,6 +156,7 @@ Stored Value transaction response bodies include the following fields:
 | Lock          | Boolean |    | Account Locked                         |
 | Voided        | Boolean |    | Transaction Voided                     |
 | Code <sup>2</sup> | String  | 10 | Account Short Code                 |
+| CreditLimit   | Numeric | 8  | Credit Limit                           |
 
 <sup>1</sup> `Status` values: `Approved`, `Duplicate`, `Declined`, or `Error`<br />
 <sup>2</sup> Only returned upon [Create](#create).
