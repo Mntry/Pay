@@ -56,11 +56,11 @@
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
-| **Amount** <sup>1</sup>       | String  | 8   | Updated Transaction Amount    | Body |
+| **Amount** <sup>1</sup>       | String  | 8   | Updated or Original Transaction Amount    | Body |
 | **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
 
-<sup>1</sup> Include either or both of these fields.
+<sup>1</sup> Include either or both of these fields. If including `Tip` field, `Amount` must be the original transaction amount.
 
 <br />
 ## Return
