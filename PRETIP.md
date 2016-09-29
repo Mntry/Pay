@@ -53,7 +53,6 @@
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 | **Tip**                       | String  | 8   | Updated Tip Amount            | Body |
-| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
 
 <br />
 ## PreTip Capture
@@ -70,7 +69,6 @@ Only one PreTip Capture should be performed per PreTip since each additional Pre
 | **RefNo**                     | String  | 19  | Transaction RefNo to Capture  | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 | **Tip**                       | String  | 8   | Updated Tip Amount            | Body |
-| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
 
 <br />
 ## Responses
