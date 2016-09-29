@@ -57,8 +57,6 @@
 | **Tip**                       | String  | 8   | Updated Tip Amount            | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
 
-<sup>1</sup> Include either or both of these fields.
-
 <br />
 ## PreTip Capture
 
