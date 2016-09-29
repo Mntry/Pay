@@ -23,7 +23,6 @@
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)      | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                 | Body |
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
-| Tip                           | String  | 8   | Tip Amount                     | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
