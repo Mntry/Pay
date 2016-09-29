@@ -25,13 +25,11 @@
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | Tip                           | String  | 8   | Tip Amount                     | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
-| AuthCode  <sup>4</sup>        | String  | 16  | Voice Authorization Code       | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
-<sup>4</sup> Include this field for authorizations obtained from the voice authorization center.
 
 <br />
 ## PreTip Void
