@@ -49,18 +49,15 @@
 <br />
 ## Adjust
 
-`PUT` /credit/sale/**{RefNo}**
+`PUT` /credit/sale/**{RefNo}**/adjust
 
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
-| **Amount** <sup>1</sup>       | String  | 8   | Updated Transaction Amount    | Body |
-| **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
+| **Tip**                       | String  | 8   | New or Updated Tip Amount     | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
-
-<sup>1</sup> Include either or both of these fields.
 
 <br />
 ## Return
