@@ -96,7 +96,7 @@ Credit PreTip transaction response bodies will include the following fields:
 | Token         | String  | 15 | Account Token                          |
 | Captured <sup>4</sup>      | Boolean |    | Transaction Captured Flag              |
 
-<sup>1</sup> `Status` values: `Approved`, `Declined`, `Success`, or `Error`<br />
+<sup>1</sup> `Status` values: `Approved`, `Declined`, or `Error`<br />
 <sup>2</sup> `Brand` values: `VISA`, `M/C`, `DCVR`, `AMEX`, `DCLB`, `JCB`, or `OTHER`<br />
 <sup>3</sup> Store `RefNo` value for follow-up transaction use.<br />
 <sup>4</sup> `Captured` flag indicates when a followup [PreTip Capture](#pretip-capture) transaction is necessary (when `Captured` = `false`).
