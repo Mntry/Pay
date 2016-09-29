@@ -79,7 +79,7 @@
 <br />
 ## Responses
 
-Depending upon the merchant's destination processor, the PreTip transactions might return uncaptured. When a PreTip transaction response includes `Captured` as `false`, a `PreTipCapture` transaction must follow in order to successfully capture.
+Depending upon the merchant's destination processor, the PreTip transactions might return uncaptured. When a PreTip transaction response includes the `Captured` field as `false`, a `PreTipCapture` transaction must follow in order to successfully capture, in which you can add a `Tip` field. Conversely, when the response includes the `Captured` field as `true`, a `PreTipAdjust` transaction can follow to add a `Tip`, but is not required.
 
 Credit PreTip transaction response bodies will include the following fields:
 
