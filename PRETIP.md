@@ -60,6 +60,10 @@
 <br />
 ## PreTip Capture
 
+A PreTip transaction that is not captured, will not be settled (i.e. paid to the merchant account).
+
+Only one PreTip Capture should be performed per PreTip since each additional PreTip Caprture performed will result in multiple charges against the cardholder account.
+
 `PUT` /credit/pretip/**{RefNo}**/capture
 
 ###Request Fields (**bold** fields required)
