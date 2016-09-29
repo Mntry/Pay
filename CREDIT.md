@@ -3,7 +3,6 @@
 ### Credit Transaction Requests
 * [Sale](#sale)
 * [Void Sale](#void-sale)
-* [Adjust](#adjust)
 * [Return](#return)
 * [Void Return](#void-return)
 * [Auth Only](#auth-only)
@@ -45,19 +44,6 @@
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
-
-<br />
-## Adjust
-
-`PUT` /credit/sale/**{RefNo}**/adjust
-
-###Request Fields (**bold** fields required)
-| Field                         | Type    | Max Length  | Description                   | Location |
-|-------------------------------|---------|-----|-------------------------------|----|
-| **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
-| **Token**                     | String  | 20  | Monetary Token                | Body |
-| **Tip**                       | String  | 8   | New or Updated Tip Amount     | Body |
-| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
 
 <br />
 ## Return
