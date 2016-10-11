@@ -3,8 +3,11 @@
 ### Credit Transaction Requests
 * [Sale](#sale)
 * [Void Sale](#void-sale)
+* [Adjust](#adjust)
 * [Return](#return)
 * [Void Return](#void-return)
+* [PreAuth](#preauth)
+* [Capture](#capture)
 * [Auth Only](#auth-only)
 
 ### Credit Transaction Responses
@@ -46,6 +49,22 @@
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 
 <br />
+## Adjust
+
+`PUT` /credit/sale/**{RefNo}**
+
+###Request Fields (**bold** fields required)
+| Field                         | Type    | Max Length  | Description                   | Location |
+|-------------------------------|---------|-----|-------------------------------|----|
+| **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
+| **Token**                     | String  | 20  | Monetary Token                | Body |
+| **Amount** <sup>1</sup>       | String  | 8   | Updated Transaction Amount    | Body |
+| **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
+| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
+
+<sup>1</sup> Include either of these fields.
+
+<br />
 ## Return
 
 `POST` /credit/return
@@ -77,6 +96,46 @@
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
+
+<br />
+## PreAuth
+
+`POST` /credit/preauth
+
+###Request Fields (**bold** fields required)
+| Field                         | Type    | Max Length  | Description                   | Location |
+|-------------------------------|---------|-----|--------------------------------|------|
+| **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number            | Body |
+| **Expiration** <sup>1</sup>   | String  | 4   | Card Expiration Date (MMYY)    | Body |
+| CVV <sup>1</sup>              | String  | 4   | Card Account CVV               | Body |
+| Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code            | Body |
+| **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)      | Body |
+| **Token** <sup>3</sup>        | String  | 20  | Monetary Token                 | Body |
+| **Amount**                    | String  | 8   | Transaction Amount             | Body |
+| Tip                           | String  | 8   | Tip Amount                     | Body |
+| InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
+| AuthCode  <sup>4</sup>        | String  | 16  | Voice Authorization Code       | Body |
+| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
+
+<sup>1</sup> Include these fields for manually entered account information.<br />
+<sup>2</sup> Include this field for swiped account information.<br />
+<sup>3</sup> Include this field for tokenized card information.<br />
+<sup>4</sup> Include this field for authorizations obtained from the voice authorization center.
+<br />
+## Capture
+
+`PUT` /credit/preauth/**{RefNo}**/capture
+
+###Request Fields (**bold** fields required)
+| Field                         | Type    | Max Length  | Description                   | Location |
+|-------------------------------|---------|-----|-------------------------------|----|
+| **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
+| **Token**                     | String  | 20  | Monetary Token                | Body |
+| **Amount** <sup>1</sup>       | String  | 8   | Updated Transaction Amount    | Body |
+| **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
+| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
+
+<sup>1</sup> Include either or both of these fields.
 
 <br />
 ## Auth Only
