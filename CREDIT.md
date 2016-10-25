@@ -145,7 +145,7 @@
 <br />
 ## Capture
 
-`PUT` /credit/preauth/**{RefNo}**/capture
+`PUT` /credit/preauth/**{RefNo}**
 
 ###Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
