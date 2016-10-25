@@ -1,5 +1,8 @@
 # Monetary Pay API
 
+### Merchant Supported Transactions Lookup
+* [Supported Transactions](#supported-transactions)
+
 ### Credit Transaction Requests
 * [Sale](#sale)
 * [Void Sale](#void-sale)
@@ -13,6 +16,24 @@
 ### Credit Transaction Responses
 * [Response Fields](#response-fields)
 
+## Supported Transactions
+
+`GET` /credit
+
+###Supported Transactions Response Fields
+| Field                         | Type     |
+|-------------------------------|----------|
+| Sale                          | Boolean  |
+| VoidSale                      | Boolean  |
+| PreAuth                       | Boolean  |
+| PreAuthCapture                | Boolean  |
+| Adjust                        | Boolean  |
+| Return                        | Boolean  |
+| VoidReturn                    | Boolean  |
+| AuthOnly                      | Boolean  |
+| ZeroAuth                      | Boolean  |
+
+<br />
 ## Sale
 
 `POST` /credit/sale
