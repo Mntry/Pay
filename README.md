@@ -17,6 +17,7 @@ We support the following for `Content-Type` and `Accepts` values:
 ##Transactions
 
 ###[Credit Transactions](CREDIT.md)
+* [Supported Transactions](CREDIT.md#supported-transactions) `GET` /credit
 * [Sale](CREDIT.md#sale) `POST` /credit/sale
 * [Void Sale](CREDIT.md#void-sale) `POST` /credit/sale/**{RefNo}**/void
 * [Adjust](CREDIT.md#adjust) `PUT` /credit/sale/**{RefNo}**
