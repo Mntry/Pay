@@ -23,6 +23,8 @@ We support the following for `Content-Type` and `Accepts` values:
 * [Adjust](CREDIT.md#adjust) `PUT` /credit/sale/**{RefNo}**
 * [Return](CREDIT.md#return) `POST` /credit/return
 * [Void Return](CREDIT.md#void-return) `POST` /credit/return/**{RefNo}**/void
+* [PreAuth](CREDIT.md#preauth)
+* [Capture](CREDIT.md#capture)
 * [Auth Only](CREDIT.md#auth-only) `POST` /credit/authonly
 
 ###[Debit Transactions](DEBIT.md)
