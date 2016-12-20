@@ -75,6 +75,7 @@ Accept: application/json
   "Account": "XXXXXXXXXXXX4242",
   "Expiration": "XXXX",
   "Brand": "VISA",
+  "AuthCode": "ABC123",
   "RefNo": "123",
   "Amount": "1.00",
   "Authorized": "1.00",
