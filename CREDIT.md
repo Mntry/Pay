@@ -201,6 +201,8 @@ Credit transaction response bodies will include the following fields:
 | Amount        | String  | 8   | Transaction Amount                    |
 | Tip           | String  | 8   | Tip Amount                            |
 | Authorized    | String  | 8   | Amount Authorized                     |
+| AVSResult     | String  | 40  | AVS Result                            |
+| CVVResult     | String  | 40  | CVV Result                            |
 | InvoiceNo     | String  | 10  | Echoed Unique Transaction Identifier  |
 | RefNo <sup>3</sup>        | String  | 19  | Transaction Reference Number          |
 | Token         | String  | 15 | Account Token                         |
