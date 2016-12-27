@@ -45,4 +45,5 @@
   * Amount: `1.04`
 
 <sup>1</sup> For merchant accounts supporting Sale/Adjust transcations.
+
 <sup>2</sup> For merchant accounts supporting PreAuth/Capture transactions. 
