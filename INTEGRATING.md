@@ -37,7 +37,7 @@
   * RefNo: _`[Last Transaction Response RefNo]`_
   * Token: _`[Last Transaction Response Token]`_
   * Amount: `1.03`
-  * Amount: `1.00`
+  * Tip: `1.00`
 
 ####9. AuthOnly Transaction
   * Account: `4012000098765439`
