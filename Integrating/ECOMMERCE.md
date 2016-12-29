@@ -2,7 +2,7 @@
 ##Monetary eCommerce Integration
 
 A typical eCommerce integration with Monetary consists of the following:
-* Client side tokenization utilizing one or more of our tokenization frameworks
+* Client side tokenization utilizing one or more of our tokenization frameworks.
   * An `otu_` (one-time-use) token is created that is good for 15 minutes.
 * Payment processing utilizing one of our gateway platforms.
   * An [Auth Only](https://github.com/Mntry/Pay/blob/master/CREDIT.md#auth-only) transaction is sent to validate the account information represented by the `otu_` token.
