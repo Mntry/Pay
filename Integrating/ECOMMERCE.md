@@ -28,7 +28,7 @@ To validate your eCommerce integration with Monetary, please send the following 
 * Token: _`[Card Token]`_
 * Amount: `1.02`
 
-####5. Adjust
+####5. Adjust <sup>1</sup>
 * RefNo: _`[RefNo from #4 Sale Above]`_
 * Token: _`[Card Token]`_
 * Amount: `1.03`
@@ -40,3 +40,6 @@ To validate your eCommerce integration with Monetary, please send the following 
 ####7. Void Return
 * RefNo: _`[RefNo from #6 Return Above]`_
 * Token: _`[Card Token]`_
+
+
+<sup>1</sup> For integrations and merchant accounts supporting Sale/Adjust transactions.<br />
