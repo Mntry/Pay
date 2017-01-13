@@ -79,7 +79,7 @@ Accept: application/json
   "RefNo": "123",
   "Amount": "1.00",
   "Authorized": "1.00",
-  "Token": "card_1ABCDEFG2"
+  "Token": "card1ABCDEFG2"
 }
 ```
 
@@ -98,7 +98,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "Token": "card_1ABCDEFG2"
+  "Token": "card1ABCDEFG2"
 }
 ```
 
@@ -115,6 +115,6 @@ Accept: application/json
   "RefNo": "124",
   "Amount": "1.00",
   "Authorized": "1.00",
-  "Token": "card_1ABCDEFG2"
+  "Token": "card1ABCDEFG2"
 }
 ```
