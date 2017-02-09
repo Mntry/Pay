@@ -1,4 +1,4 @@
-#Integrating to Monetary's Credit Gateway
+#Testing Your Integration to Monetary's Credit Gateway
 
 ###Submit the following transactions with the specified parameters:
 
