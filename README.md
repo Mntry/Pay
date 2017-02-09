@@ -79,7 +79,8 @@ Accept: application/json
   "RefNo": "123",
   "Amount": "1.00",
   "Authorized": "1.00",
-  "Token": "card1ABCDEFG2"
+  "Token": "card1ABCDEFG2",
+  "AccountSignature": "7f1cf39b62f06a9396d3c8bd1f8f2ff3"
 }
 ```
 
@@ -115,6 +116,7 @@ Accept: application/json
   "RefNo": "124",
   "Amount": "1.00",
   "Authorized": "1.00",
-  "Token": "card1ABCDEFG2"
+  "Token": "card1ABCDEFG2",
+  "AccountSignature": "7f1cf39b62f06a9396d3c8bd1f8f2ff3"
 }
 ```
