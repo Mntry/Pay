@@ -6,7 +6,7 @@ A typical eCommerce integration with Monetary consists of the following:
   * An `otu` (one-time-use) token is created that is good for 15 minutes.
 * Payment processing utilizing one of our gateway platforms.
   * An [Auth Only](https://github.com/Mntry/Pay/blob/master/CREDIT.md#auth-only) transaction is sent to validate the account information represented by the `otu_` token.
-  * A `card_` token is returned with any successful transaction and is good through the expiration date of the account it represents.
+  * A `card` token is returned with any successful transaction and is good through the expiration date of the account it represents.
 
 ##Integration Validation Procedure
 
