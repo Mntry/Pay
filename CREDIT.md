@@ -206,7 +206,6 @@ Credit transaction response bodies will include the following fields:
 | InvoiceNo     | String  | 10  | Echoed Unique Transaction Identifier  |
 | RefNo <sup>3</sup>        | String  | 19  | Transaction Reference Number          |
 | Token         | String  | 15 | Account Token                          |
-| AccountSignature        | String  | 32 | Unique Card Account Identifier                 |
 
 <sup>1</sup> `Status` values: `Approved`, `Declined`, `Success`, or `Error`<br />
 <sup>2</sup> `Brand` values: `VISA`, `M/C`, `DCVR`, `AMEX`, `DCLB`, `JCB`, or `OTHER`<br />
