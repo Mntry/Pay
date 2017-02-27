@@ -49,7 +49,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)      | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                 | Body |
 | **KSN** <sup>4</sup>          | String  | 20  | Encryption Key Serial Number   | Body |
-| **EncryptedBlock** <sup>4</sup>| String | 99  | Encrypted Data Block           | Body |
+| **EncryptedBlock** <sup>4</sup>| String | 224 | Encrypted Data Block           | Body |
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | Tip                           | String  | 8   | Tip Amount                     | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
@@ -104,7 +104,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)     | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
 | **KSN** <sup>4</sup>          | String  | 20  | Encryption Key Serial Number   | Body |
-| **EncryptedBlock** <sup>4</sup>| String | 99  | Encrypted Data Block           | Body |
+| **EncryptedBlock** <sup>4</sup>| String | 224 | Encrypted Data Block           | Body |
 | **Amount**                    | String  | 8   | Transaction Amount            | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
@@ -140,7 +140,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)      | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                 | Body |
 | **KSN** <sup>4</sup>          | String  | 20  | Encryption Key Serial Number   | Body |
-| **EncryptedBlock** <sup>4</sup>| String | 99  | Encrypted Data Block           | Body |
+| **EncryptedBlock** <sup>4</sup>| String | 224 | Encrypted Data Block           | Body |
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | Tip                           | String  | 8   | Tip Amount                     | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
@@ -183,7 +183,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)     | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
 | **KSN** <sup>4</sup>          | String  | 20  | Encryption Key Serial Number   | Body |
-| **EncryptedBlock** <sup>4</sup>| String | 99  | Encrypted Data Block           | Body |
+| **EncryptedBlock** <sup>4</sup>| String | 224 | Encrypted Data Block           | Body |
 | **Amount** <sup>5</sup>       | String  | 8   | Transaction Amount            | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
 | AuthCode  <sup>6</sup>        | String  | 16  | Voice Authorization Code      | Body |
