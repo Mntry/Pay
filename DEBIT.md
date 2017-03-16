@@ -11,7 +11,7 @@
 
 `POST` /debit/sale
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Track2**                    | String  | 37  | Card Track2 Data (stripe)      | Body |
@@ -26,7 +26,7 @@
 
 `POST` /debit/return
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Track2**                    | String  | 37  | Card Track2 Data (stripe)      | Body |
@@ -42,7 +42,7 @@
 
 Debit transaction response bodies will include the following fields:
 
-###Response Fields
+### Response Fields
 | Field         | Type    | Max Length  | Description                   |
 |---------------|---------|-----|---------------------------------------|
 | Status <sup>1</sup>        | String  | 10  | Transaction Status                    |
