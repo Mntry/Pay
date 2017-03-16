@@ -35,6 +35,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | ZeroAuth                      | Boolean  |
 
 <br />
+
 ## Sale
 
 `POST` /credit/sale
@@ -58,8 +59,8 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
 <sup>4</sup> Include this field for authorizations obtained from the voice authorization center.
-
 <br />
+
 ## Void Sale
 
 `POST` /credit/sale/**{RefNo}**/void
@@ -71,6 +72,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 
 <br />
+
 ## Adjust
 
 `PUT` /credit/sale/**{RefNo}**
@@ -85,8 +87,8 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
 
 <sup>1</sup> Include either of these fields.
-
 <br />
+
 ## Return
 
 `POST` /credit/return
@@ -107,8 +109,8 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.
-
 <br />
+
 ## Void Return
 
 `POST` /credit/return/**{RefNo}**/void
@@ -118,8 +120,8 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
-
 <br />
+
 ## PreAuth
 
 `POST` /credit/preauth
@@ -144,6 +146,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>3</sup> Include this field for tokenized card information.<br />
 <sup>4</sup> Include this field for authorizations obtained from the voice authorization center.
 <br />
+
 ## Capture
 
 `PUT` /credit/preauth/**{RefNo}**
@@ -158,8 +161,8 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
 
 <sup>1</sup> Include either or both of these fields.
-
 <br />
+
 ## Auth Only
 
 `POST` /credit/authonly
@@ -183,8 +186,8 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>3</sup> Include this field for tokenized card information.<br />
 <sup>4</sup> `Amount` value may be `0.00` for a zero-dollar (card verification) authorization.<br />
 <sup>5</sup> Include this field for authorizations obtained from the voice authorization center.
-
 <br />
+
 ## Responses
 
 Credit transaction response bodies will include the following fields:
