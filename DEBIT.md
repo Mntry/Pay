@@ -37,8 +37,8 @@
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
-
 <br />
+
 ## Responses
 
 Debit transaction response bodies will include the following fields:
