@@ -21,7 +21,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 `GET` /credit
 
-###Supported Transactions Response Fields
+### Supported Transactions Response Fields
 | Field                         | Type     |
 |-------------------------------|----------|
 | Sale                          | Boolean  |
@@ -39,7 +39,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 `POST` /credit/sale
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number            | Body |
@@ -64,7 +64,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 `POST` /credit/sale/**{RefNo}**/void
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL |
@@ -75,7 +75,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 `PUT` /credit/sale/**{RefNo}**
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
@@ -91,7 +91,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 `POST` /credit/return
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number           | Body |
@@ -113,7 +113,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 `POST` /credit/return/**{RefNo}**/void
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
@@ -124,7 +124,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 `POST` /credit/preauth
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number            | Body |
@@ -148,7 +148,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 `PUT` /credit/preauth/**{RefNo}**
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
@@ -164,7 +164,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 `POST` /credit/authonly
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number           | Body |
@@ -189,7 +189,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 Credit transaction response bodies will include the following fields:
 
-###Response Fields
+### Response Fields
 | Field         | Type    | Max Length  | Description                   |
 |---------------|---------|-----|---------------------------------------|
 | Status <sup>1</sup>        | String  | 10  | Transaction Status       |
