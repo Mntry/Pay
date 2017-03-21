@@ -50,7 +50,8 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)      | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                 | Body |
 | **DeviceID** <sup>4</sup>     | String  | 20  | Monetary Device ID             | Body |
-| MACAddress <sup>4</sup>       | String  | 17  | Monetary Device MAC Address    | Body |
+| DeviceMAC <sup>4<sup>A</sup></sup>       | String  | 17  | Monetary Device MAC Address    | Body |
+| DeviceIP <sup>4<sup>B</sup></sup>       | String  | 17  | Monetary Device MAC Address    | Body |
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | Tip                           | String  | 8   | Tip Amount                     | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
@@ -61,6 +62,8 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
 <sup>4</sup> Include these fields for Monetary remote device transactions.<br />
+<sup>4<sup>A</sup></sup> Include this field to send the request to a Monetary device by MAC address.<br />
+<sup>4<sup>B</sup></sup> Include this field to send the request to a Monetary device by IP address.<br />
 <sup>5</sup> Include this field for authorizations obtained from the voice authorization center.
 <br />
 
