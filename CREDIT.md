@@ -32,7 +32,6 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | Return                        | Boolean  |
 | VoidReturn                    | Boolean  |
 | AuthOnly                      | Boolean  |
-| ZeroAuth                      | Boolean  |
 
 <br />
 
