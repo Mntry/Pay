@@ -48,16 +48,20 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code            | Body |
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)      | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                 | Body |
+| **AccountKey** <sup>4</sup>   | String  | 20  | Account Encryption Key         | Body |
+| **EncryptedAccount** <sup>4</sup>| String | 224 | Encrypted Account Data Block | Body |
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | Tip                           | String  | 8   | Tip Amount                     | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
-| AuthCode  <sup>4</sup>        | String  | 16  | Voice Authorization Code       | Body |
+| AuthCode  <sup>5</sup>        | String  | 16  | Voice Authorization Code       | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
-<sup>4</sup> Include this field for authorizations obtained from the voice authorization center.
+<sup>4</sup> Include these fields for encrypted account information.<br />
+<sup>5</sup> Include this field for authorizations obtained from the voice authorization center.
+
 <br />
 
 ## Void Sale
@@ -101,13 +105,17 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code           | Body |
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)     | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
+| **AccountKey** <sup>4</sup>   | String  | 20  | Account Encryption Key         | Body |
+| **EncryptedAccount** <sup>4</sup>| String | 224 | Encrypted Account Data Block | Body |
 | **Amount**                    | String  | 8   | Transaction Amount            | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
-<sup>3</sup> Include this field for tokenized card information.
+<sup>3</sup> Include this field for tokenized card information.<br />
+<sup>4</sup> Include these fields for encrypted account information.
+
 <br />
 
 ## Void Return
@@ -134,16 +142,20 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code            | Body |
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)      | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                 | Body |
+| **AccountKey** <sup>4</sup>   | String  | 20  | Account Encryption Key         | Body |
+| **EncryptedAccount** <sup>4</sup>| String | 224 | Encrypted Account Data Block | Body |
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | Tip                           | String  | 8   | Tip Amount                     | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
-| AuthCode  <sup>4</sup>        | String  | 16  | Voice Authorization Code       | Body |
+| AuthCode  <sup>5</sup>        | String  | 16  | Voice Authorization Code       | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
-<sup>4</sup> Include this field for authorizations obtained from the voice authorization center.
+<sup>4</sup> Include these fields for encrypted account information.<br />
+<sup>5</sup> Include this field for authorizations obtained from the voice authorization center.
+
 <br />
 
 ## Capture
@@ -160,6 +172,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
 
 <sup>1</sup> Include either or both of these fields.
+
 <br />
 
 ## Auth Only
@@ -175,16 +188,20 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | Zip <sup>1</sup>              | String  | 5   | Cardholder Zip Code           | Body |
 | **Track2** <sup>2</sup>       | String  | 37  | Card Track2 Data (stripe)     | Body |
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
-| **Amount** <sup>4</sup>       | String  | 8   | Transaction Amount            | Body |
+| **AccountKey** <sup>4</sup>   | String  | 20  | Account Encryption Key         | Body |
+| **EncryptedAccount** <sup>4</sup>| String | 224 | Encrypted Account Data Block | Body |
+| **Amount** <sup>5</sup>       | String  | 8   | Transaction Amount            | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
-| AuthCode  <sup>5</sup>        | String  | 16  | Voice Authorization Code      | Body |
+| AuthCode  <sup>6</sup>        | String  | 16  | Voice Authorization Code      | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
-<sup>4</sup> `Amount` value may be `0.00` for a zero-dollar (card verification) authorization.<br />
-<sup>5</sup> Include this field for authorizations obtained from the voice authorization center.
+<sup>4</sup> Include these fields for encrypted account information.<br />
+<sup>5</sup> `Amount` value may be `0.00` for a zero-dollar (card verification) authorization.<br />
+<sup>6</sup> Include this field for authorizations obtained from the voice authorization center.
+
 <br />
 
 ## Responses
