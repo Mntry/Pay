@@ -1,11 +1,12 @@
 # Getting Started with Monetary Pay API
-###Authorization
+### Authorization
 
 Authorization is easy, just insert your secret key in the `Authorization` header:
 
 `Authorization: secretKEYGOESHERE`
   
-###Content Types
+### Content Types
+
 Communicate with us in your favorite content type!
 
 We support the following for `Content-Type` and `Accepts` values:
@@ -14,9 +15,9 @@ We support the following for `Content-Type` and `Accepts` values:
 * `application/xml`
 * `x-www-url-encoded`
 
-##Transactions
+## Transactions
 
-###[Credit Transactions](CREDIT.md)
+### [Credit Transactions](CREDIT.md)
 * [Supported Transactions](CREDIT.md#supported-transactions) `GET` /credit
 * [Sale](CREDIT.md#sale) `POST` /credit/sale
 * [Void Sale](CREDIT.md#void-sale) `POST` /credit/sale/**{RefNo}**/void
@@ -27,11 +28,11 @@ We support the following for `Content-Type` and `Accepts` values:
 * [Capture](CREDIT.md#capture) `PUT` /credit/preauth/**{RefNo}**
 * [Auth Only](CREDIT.md#auth-only) `POST` /credit/authonly
 
-###[Debit Transactions](DEBIT.md)
+### [Debit Transactions](DEBIT.md)
 * [Sale](DEBIT.md#sale) `POST` /debit/sale
 * [Return](DEBIT.md#return) `POST` /debit/return
 
-###[Stored Value Transactions](STOREDVALUE.md)
+### [Stored Value Transactions](STOREDVALUE.md)
 * [Load](STOREDVALUE.md#load) `POST` /storedvalue/load
 * [Void Load](STOREDVALUE.md#void-load) `POST` /storedvalue/load/**{RefNo}**/void
 * [Sale](STOREDVALUE.md#sale) `POST` /storedvalue/sale
@@ -40,16 +41,16 @@ We support the following for `Content-Type` and `Accepts` values:
 * [Create](STOREDVALUE.md#create) `POST` /storedvalue/create
 * [Set](STOREDVALUE.md#set) `POST` /storedvalue/set
 
-###Success Responses
+### Success Responses
 * ```200 OK``` Approved Transaction
 * ```402 PAYMENT REQUIRED``` Declined Transaction
 
-###Failure Responses
+### Failure Responses
 * ```400 BAD REQUEST``` Invalid Transaction Request
 * ```401 UNAUTHORIZED``` Unauthorized Transaction
 * ```404 NOT FOUND``` Resource Not Found
 
-###Example Credit Sale Request
+### Example Credit Sale Request
 
 ```
 POST https://pay.monetary.co/v1/credit/sale
@@ -65,7 +66,7 @@ Accept: application/json
 }
 ```
 
-###Example Credit Sale Response
+### Example Credit Sale Response
 ```
 200 OK
 
@@ -83,12 +84,12 @@ Accept: application/json
 }
 ```
 
-##Using Tokens
+## Using Tokens
 As you can see in the [example response above](#example-sale-response), every successful transaction response will include a `Token` which you can use in subsequent transactions for that account!
 
 For example, this is how to void the above example sale using the `RefNo` and `Token` it returned:
 
-###Example Credit Void Request with Token
+### Example Credit Void Request with Token
 
 ```
 POST https://pay.monetary.co/v1/credit/sale/123/void
@@ -102,7 +103,7 @@ Accept: application/json
 }
 ```
 
-###Example Credit Void Response with Token
+### Example Credit Void Response with Token
 ```
 200 OK
 

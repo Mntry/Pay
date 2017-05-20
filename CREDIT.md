@@ -21,7 +21,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 `GET` /credit
 
-###Supported Transactions Response Fields
+### Supported Transactions Response Fields
 | Field                         | Type     |
 |-------------------------------|----------|
 | Sale                          | Boolean  |
@@ -32,14 +32,14 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | Return                        | Boolean  |
 | VoidReturn                    | Boolean  |
 | AuthOnly                      | Boolean  |
-| ZeroAuth                      | Boolean  |
 
 <br />
+
 ## Sale
 
 `POST` /credit/sale
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number            | Body |
@@ -63,22 +63,24 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>5</sup> Include this field for authorizations obtained from the voice authorization center.
 
 <br />
+
 ## Void Sale
 
 `POST` /credit/sale/**{RefNo}**/void
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 
 <br />
+
 ## Adjust
 
 `PUT` /credit/sale/**{RefNo}**
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
@@ -88,13 +90,13 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
 
 <sup>1</sup> Include either of these fields.
-
 <br />
+
 ## Return
 
 `POST` /credit/return
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number           | Body |
@@ -115,22 +117,23 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>4</sup> Include these fields for encrypted account information.
 
 <br />
+
 ## Void Return
 
 `POST` /credit/return/**{RefNo}**/void
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
-
 <br />
+
 ## PreAuth
 
 `POST` /credit/preauth
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number            | Body |
@@ -152,12 +155,14 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>3</sup> Include this field for tokenized card information.<br />
 <sup>4</sup> Include these fields for encrypted account information.<br />
 <sup>5</sup> Include this field for authorizations obtained from the voice authorization center.
+
 <br />
+
 ## Capture
 
 `PUT` /credit/preauth/**{RefNo}**
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
@@ -169,11 +174,12 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>1</sup> Include either or both of these fields.
 
 <br />
+
 ## Auth Only
 
 `POST` /credit/authonly
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
 | **Account** <sup>1</sup>      | Numeric | 19  | Card Account Number           | Body |
@@ -197,11 +203,12 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>6</sup> Include this field for authorizations obtained from the voice authorization center.
 
 <br />
+
 ## Responses
 
 Credit transaction response bodies will include the following fields:
 
-###Response Fields
+### Response Fields
 | Field         | Type    | Max Length  | Description                   |
 |---------------|---------|-----|---------------------------------------|
 | Status <sup>1</sup>        | String  | 10  | Transaction Status       |

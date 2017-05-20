@@ -16,7 +16,7 @@
 
 `POST` /storedvalue/load
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Account Number                 | Body |
@@ -32,25 +32,23 @@
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for alternate identifier account information.
-
 <br />
 
 ## Void Load
 
 `POST` /storedvalue/load/**{RefNo}**/void
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **RefNo**                     | Numeric  | 19  | Transaction RefNo to Void      | URL |
-
 <br />
 
 ## Sale
 
 `POST` /storedvalue/sale
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Account Number            | Body |
@@ -65,25 +63,23 @@
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for alternate identifier account information.
-
 <br />
 
 ## Void Sale
 
 `POST` /storedvalue/sale/**{RefNo}**/void
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **RefNo**                     | Numeric  | 19  | Transaction RefNo to Void      | URL |
-
 <br />
 
 ## Balance
 
 `POST` /storedvalue/balance
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Account Number            | Body |
@@ -95,14 +91,13 @@
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for alternate identifier account information.
-
 <br />
 
 ## Create
 
 `POST` /storedvalue/create
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description            | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | Amount                        | Numeric | 8   | Transaction Amount             | Body |
@@ -117,7 +112,7 @@
 
 `POST` /storedvalue/set
 
-###Request Fields (**bold** fields required)
+### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description              | Location |
 |-------------------------------|---------|-----|----------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Account Number              | Body |
@@ -133,14 +128,13 @@
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for alternate identifier account information.<br />
 <sup>4</sup> Must include one or more of these fields.
-
 <br />
 
 ## Responses
 
 Stored Value transaction response bodies include the following fields:
 
-###Response Fields
+### Response Fields
 | Field         | Type    | Max Length  | Description                   |
 |---------------|---------|-----|---------------------------------------|
 | Status <sup>1</sup> | String  | 50  | Transaction Status              |
