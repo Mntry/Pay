@@ -1,10 +1,10 @@
 # Monetary Payment Data Encryption (E2EE)
 
-###Encryption Protocols
+### Encryption Protocols
 
 We utilize industry standard encryption ([3DES](https://en.wikipedia.org/wiki/Triple_DES) + [DUKPT](https://en.wikipedia.org/wiki/Derived_unique_key_per_transaction)) to secure account information transmitted to and received by our servers.
 
-###Hardware
+### Hardware
 
 We have partnered with hardware manufacturers and distrubutors to provide secure encryption devices with Monetary's encryption keys.
 
