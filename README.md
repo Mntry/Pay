@@ -4,6 +4,12 @@
 Authorization is easy, just insert your secret key in the `Authorization` header:
 
 `Authorization: secretKEYGOESHERE`
+
+### Identification
+
+Let us know who you are! Send your product name and version in the `User-Agent` [header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent):
+
+`User-Agent: AwesomePOS/1.2.3`
   
 ### Content Types
 
@@ -56,6 +62,7 @@ We support the following for `Content-Type` and `Accepts` values:
 POST https://pay.monetary.co/v1/credit/sale
 
 Authorization: secretKEYGOESHERE
+User-Agent: AwesomePOS/1.2.3
 Content-Type: application/json
 Accept: application/json
 
@@ -95,6 +102,7 @@ For example, this is how to void the above example sale using the `RefNo` and `T
 POST https://pay.monetary.co/v1/credit/sale/123/void
 
 Authorization: secretKEYGOESHERE
+User-Agent: AwesomePOS/1.2.3
 Content-Type: application/json
 Accept: application/json
 
