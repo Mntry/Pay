@@ -4,11 +4,11 @@
 * [Sale](#sale)
 * [Return](#return)
 
-### Debit Transaction Responses
-* [Response Fields](#response-fields)
-
 ### Transaction Detail Request
 * [Transaction Detail](#transaction-detail)
+
+### Debit Transaction Responses
+* [Response Fields](#response-fields)
 
 ## Sale
 
