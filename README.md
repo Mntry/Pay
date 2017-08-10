@@ -47,6 +47,7 @@ We support the following for `Content-Type` and `Accepts` values:
 * [Balance](STOREDVALUE.md#balance) `POST` /storedvalue/balance
 * [Create](STOREDVALUE.md#create) `POST` /storedvalue/create
 * [Set](STOREDVALUE.md#set) `POST` /storedvalue/set
+* [Transaction Detail](STOREDVALUE.md#transaction-detail) `GET` /storedvalue/**{RefNo}**
 
 ### Success Responses
 * ```200 OK``` Approved Transaction
