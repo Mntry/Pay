@@ -9,6 +9,9 @@
 * [Create](#create)
 * [Set](#set)
 
+### Transaction Detail Request
+* [Transaction Detail](#transaction-detail)
+
 ### Stored Value Transaction Responses
 * [Response Fields](#response-fields)
 
@@ -128,6 +131,18 @@
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for alternate identifier account information.<br />
 <sup>4</sup> Must include one or more of these fields.
+<br />
+
+## Transaction Detail
+Replay transaction response by RefNo.
+
+`GET` /storedvalue/**{RefNo}**
+
+### Request Fields (**bold** fields required)
+| Field                         | Type    | Max Length  | Description                   | Location |
+|-------------------------------|---------|-----|-------------------------------|----|
+| **RefNo**                     | String  | 19  | Transaction RefNo     | URL |
+
 <br />
 
 ## Responses
