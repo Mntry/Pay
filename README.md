@@ -33,6 +33,7 @@ We support the following for `Content-Type` and `Accepts` values:
 * [PreAuth](CREDIT.md#preauth) `POST` /credit/preauth
 * [Capture](CREDIT.md#capture) `PUT` /credit/preauth/**{RefNo}**
 * [Auth Only](CREDIT.md#auth-only) `POST` /credit/authonly
+* [Transaction Detail](CREDIT.md#transaction-detail) `GET` /credit/**{RefNo}**
 
 ### [Debit Transactions](DEBIT.md)
 * [Sale](DEBIT.md#sale) `POST` /debit/sale
