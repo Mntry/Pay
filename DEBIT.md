@@ -7,6 +7,9 @@
 ### Debit Transaction Responses
 * [Response Fields](#response-fields)
 
+### Transaction Detail Request
+* [Transaction Detail](#transaction-detail)
+
 ## Sale
 
 `POST` /debit/sale
@@ -36,6 +39,18 @@
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
+
+<br />
+
+## Transaction Detail
+Replay transaction response by RefNo.
+
+`GET` /credit/**{RefNo}**
+
+### Request Fields (**bold** fields required)
+| Field                         | Type    | Max Length  | Description                   | Location |
+|-------------------------------|---------|-----|-------------------------------|----|
+| **RefNo**                     | String  | 19  | Transaction RefNo     | URL |
 
 <br />
 
