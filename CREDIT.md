@@ -208,7 +208,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <br />
 
 ## Transaction Detail
-Replay transaction response using RefNo as lookup key.
+Replay transaction response by RefNo.
 
 `GET` /credit/**{RefNo}**
 
