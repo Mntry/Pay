@@ -1,16 +1,3 @@
-Datacap Call
-1. Really long transaction times with EMV and TranCloud
-2. 21.00.02 on the new Kernal is good to good
-	Push back on that
-3. PreAuth (you can void), PreAuth + Capture then Return then Capture (cardholder will see three transactions)
-	Luke at mobile bytes get transaction times for TranCloud
-	Test a swipe transaction for total time
-4. January for TSYS eCommerce
-5. Deploy the TSYS triple try to production
-6. CDE is our guy for KIF with Bluefin
-7. Marketing material for Qubica AMF after integration
-8. Remove the licensing call out of our multi-merchant NETePay# Monetary Pay API
-
 ### Stored Value Transaction Requests
 * [Load](#load)
 * [Void Load](#void-load)
