@@ -1,4 +1,15 @@
-# Monetary Pay API
+Datacap Call
+1. Really long transaction times with EMV and TranCloud
+2. 21.00.02 on the new Kernal is good to good
+	Push back on that
+3. PreAuth (you can void), PreAuth + Capture then Return then Capture (cardholder will see three transactions)
+	Luke at mobile bytes get transaction times for TranCloud
+	Test a swipe transaction for total time
+4. January for TSYS eCommerce
+5. Deploy the TSYS triple try to production
+6. CDE is our guy for KIF with Bluefin
+7. Marketing material for Qubica AMF after integration
+8. Remove the licensing call out of our multi-merchant NETePay# Monetary Pay API
 
 ### Stored Value Transaction Requests
 * [Load](#load)
@@ -107,7 +118,7 @@
 | NewIdentifier                 | String  | 30  | New Account Alternate Identifier | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier    | Body |
 | Promo                         | Boolean |     | Promotional Create               | Body |
-| Lock                          | Boolean |     | Account Lock                     | Body |
+| Locked                          | Boolean |     | Account Locked                     | Body |
 | CreditLimit                   | Numeric |  8  | Enable Credit and Set Limit      | Body |
 <br />
 
@@ -124,7 +135,7 @@
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier     | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV             | Body |
 | NewIdentifier <sup>4</sup>    | String  | 30  | New Account Alternate Identifier | Body |
-| Lock <sup>4</sup>             | Boolean |     | Account Lock                     | Body |
+| Locked <sup>4</sup>             | Boolean |     | Account Locked                    | Body |
 | CreditLimit <sup>4</sup>      | Numeric |  8  | Enable Credit and Set Limit      | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
@@ -162,7 +173,7 @@ Stored Value transaction response bodies include the following fields:
 | RefNo         | String  | 19 | Transaction RefNo                      |
 | InvoiceNo     | String  | 10 | Unique Transaction Identifier          |
 | Promo         | Boolean |    | Promotional Load                       |
-| Lock          | Boolean |    | Account Locked                         |
+| Locked          | Boolean |    | Account Locked                         |
 | Voided        | Boolean |    | Transaction Voided                     |
 | Code <sup>2</sup> | String  | 10 | Account Short Code                 |
 | CreditLimit   | Numeric | 8  | Credit Limit                           |
