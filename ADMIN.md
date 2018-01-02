@@ -11,7 +11,7 @@
 
 ## Batch Summary
 
-`POST` /admin/batchsummary
+`GET` /admin/batchsummary
 
 ### Request Fields
 
