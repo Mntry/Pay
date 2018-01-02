@@ -1,5 +1,3 @@
-# Monetary Pay API
-
 ### Stored Value Transaction Requests
 * [Load](#load)
 * [Void Load](#void-load)
@@ -9,6 +7,9 @@
 * [Create](#create)
 * [Set](#set)
 
+### Transaction Detail Request
+* [Transaction Detail](#transaction-detail)
+
 ### Stored Value Transaction Responses
 * [Response Fields](#response-fields)
 
@@ -17,10 +18,10 @@
 `POST` /storedvalue/load
 
 ### Request Fields (**bold** fields required)
-| Field                         | Type    | Max Length  | Description            | Location |
+| Field                         | Type    | Max Length | Description             | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
 | **Account** <sup>1</sup>      | Numeric | 19  | Account Number                 | Body |
-| **CVV** <sup>1</sup>              | String  | 3   | Account CVV                    | Body |
+| **CVV** <sup>1</sup>          | String  | 3   | Account CVV                    | Body |
 | **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)           | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier   | Body |
 | **Amount**                    | Numeric | 8   | Transaction Amount             | Body |
@@ -39,9 +40,9 @@
 `POST` /storedvalue/load/**{RefNo}**/void
 
 ### Request Fields (**bold** fields required)
-| Field                         | Type    | Max Length  | Description            | Location |
+| Field                         | Type    | Max Length | Description             | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
-| **RefNo**                     | Numeric  | 19  | Transaction RefNo to Void      | URL |
+| **RefNo**                     | Numeric | 19  | Transaction RefNo to Void      | URL |
 <br />
 
 ## Sale
@@ -49,11 +50,11 @@
 `POST` /storedvalue/sale
 
 ### Request Fields (**bold** fields required)
-| Field                         | Type    | Max Length  | Description            | Location |
+| Field                         | Type    | Max Length | Description             | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
-| **Account** <sup>1</sup>      | Numeric | 19  | Account Number            | Body |
-| **CVV** <sup>1</sup>              | String  | 3   | Account CVV               | Body |
-| **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)      | Body |
+| **Account** <sup>1</sup>      | Numeric | 19  | Account Number                 | Body |
+| **CVV** <sup>1</sup>          | String  | 3   | Account CVV                    | Body |
+| **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)           | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier   | Body |
 | **Amount**                    | Numeric | 8   | Transaction Amount             | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV           | Body |
@@ -70,9 +71,9 @@
 `POST` /storedvalue/sale/**{RefNo}**/void
 
 ### Request Fields (**bold** fields required)
-| Field                         | Type    | Max Length  | Description            | Location |
+| Field                         | Type    | Max Length | Description             | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
-| **RefNo**                     | Numeric  | 19  | Transaction RefNo to Void      | URL |
+| **RefNo**                     | Numeric | 19  | Transaction RefNo to Void      | URL |
 <br />
 
 ## Balance
@@ -80,11 +81,11 @@
 `POST` /storedvalue/balance
 
 ### Request Fields (**bold** fields required)
-| Field                         | Type    | Max Length  | Description            | Location |
+| Field                         | Type    | Max Length | Description             | Location |
 |-------------------------------|---------|-----|--------------------------------|------|
-| **Account** <sup>1</sup>      | Numeric | 19  | Account Number            | Body |
-| **CVV** <sup>1</sup>              | String  | 3   | Account CVV               | Body |
-| **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)      | Body |
+| **Account** <sup>1</sup>      | Numeric | 19  | Account Number                 | Body |
+| **CVV** <sup>1</sup>          | String  | 3   | Account CVV                    | Body |
+| **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)           | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier   | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV           | Body |
 
@@ -98,14 +99,14 @@
 `POST` /storedvalue/create
 
 ### Request Fields (**bold** fields required)
-| Field                         | Type    | Max Length  | Description            | Location |
-|-------------------------------|---------|-----|--------------------------------|------|
-| Amount                        | Numeric | 8   | Transaction Amount             | Body |
+| Field                         | Type    | Max Length | Description               | Location |
+|-------------------------------|---------|-----|----------------------------------|------|
+| Amount                        | Numeric | 8   | Transaction Amount               | Body |
 | NewIdentifier                 | String  | 30  | New Account Alternate Identifier | Body |
-| InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
+| InvoiceNo                     | String  | 10  | Unique Transaction Identifier    | Body |
 | Promo                         | Boolean |     | Promotional Create               | Body |
-| Lock                          | Boolean |     | Account Lock                   | Body |
-
+| Locked                          | Boolean |     | Account Locked                     | Body |
+| CreditLimit                   | Numeric |  8  | Enable Credit and Set Limit      | Body |
 <br />
 
 ## Set
@@ -113,21 +114,33 @@
 `POST` /storedvalue/set
 
 ### Request Fields (**bold** fields required)
-| Field                         | Type    | Max Length  | Description              | Location |
+| Field                         | Type    | Max Length | Description               | Location |
 |-------------------------------|---------|-----|----------------------------------|------|
-| **Account** <sup>1</sup>      | Numeric | 19  | Account Number              | Body |
-| **CVV** <sup>1</sup>              | String  | 3   | Account CVV                 | Body |
-| **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)        | Body |
+| **Account** <sup>1</sup>      | Numeric | 19  | Account Number                   | Body |
+| **CVV** <sup>1</sup>          | String  | 3   | Account CVV                      | Body |
+| **Track2** <sup>2</sup>       | String  | 50  | Track2 Data (stripe)             | Body |
 | **Identifier** <sup>3</sup>   | String  | 30  | Account Alternate Identifier     | Body |
 | OverrideCVV                   | Boolean |     | Override Account CVV             | Body |
-| NewIdentifier <sup>4</sup>     | String  | 30  | New Account Alternate Identifier | Body |
-| Lock <sup>4</sup>              | Boolean |     | Account Lock                     | Body |
+| NewIdentifier <sup>4</sup>    | String  | 30  | New Account Alternate Identifier | Body |
+| Locked <sup>4</sup>             | Boolean |     | Account Locked                    | Body |
 | CreditLimit <sup>4</sup>      | Numeric |  8  | Enable Credit and Set Limit      | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for alternate identifier account information.<br />
 <sup>4</sup> Must include one or more of these fields.
+<br />
+
+## Transaction Detail
+Replay transaction response by RefNo.
+
+`GET` /storedvalue/**{RefNo}**
+
+### Request Fields (**bold** fields required)
+| Field                         | Type    | Max Length | Description            | Location |
+|-------------------------------|---------|-----|-------------------------------|-----|
+| **RefNo**                     | String  | 19  | Transaction RefNo             | URL |
+
 <br />
 
 ## Responses
@@ -147,7 +160,7 @@ Stored Value transaction response bodies include the following fields:
 | RefNo         | String  | 19 | Transaction RefNo                      |
 | InvoiceNo     | String  | 10 | Unique Transaction Identifier          |
 | Promo         | Boolean |    | Promotional Load                       |
-| Lock          | Boolean |    | Account Locked                         |
+| Locked          | Boolean |    | Account Locked                         |
 | Voided        | Boolean |    | Transaction Voided                     |
 | Code <sup>2</sup> | String  | 10 | Account Short Code                 |
 | CreditLimit   | Numeric | 8  | Credit Limit                           |

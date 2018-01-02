@@ -1,6 +1,6 @@
 # Monetary Pay API
 
-### Merchant Supported Transactions Lookup
+### Supported Transactions Request
 * [Supported Transactions](#supported-transactions)
 
 ### Credit Transaction Requests
@@ -12,6 +12,9 @@
 * [PreAuth](#preauth)
 * [Capture](#capture)
 * [Auth Only](#auth-only)
+
+### Transaction Detail Request
+* [Transaction Detail](#transaction-detail)
 
 ### Credit Transaction Responses
 * [Response Fields](#response-fields)
@@ -209,6 +212,18 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>4</sup> Include these fields for encrypted account information.<br />
 <sup>5</sup> `Amount` value may be `0.00` for a zero-dollar (card verification) authorization.<br />
 <sup>6</sup> Include this field for authorizations obtained from the voice authorization center.
+
+<br />
+
+## Transaction Detail
+Replay transaction response by RefNo.
+
+`GET` /credit/**{RefNo}**
+
+### Request Fields (**bold** fields required)
+| Field                         | Type    | Max Length  | Description                   | Location |
+|-------------------------------|---------|-----|-------------------------------|----|
+| **RefNo**                     | String  | 19  | Transaction RefNo     | URL |
 
 <br />
 
