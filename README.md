@@ -49,6 +49,10 @@ We support the following for `Content-Type` and `Accepts` values:
 * [Set](STOREDVALUE.md#set) `POST` /storedvalue/set
 * [Transaction Detail](STOREDVALUE.md#transaction-detail) `GET` /storedvalue/**{RefNo}**
 
+### [Administrative Requests](ADMIN.md)
+* [Batch Summary](ADMIN.md#batch-summary) `GET` /admin/batchsummary
+* [Batch Close](ADMIN.md#batch-close) `POST` /admin/batchclose
+
 ### Success Responses
 * ```200 OK``` Approved Transaction
 * ```402 PAYMENT REQUIRED``` Declined Transaction
