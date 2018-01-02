@@ -168,7 +168,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 ### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
 |-------------------------------|---------|-----|-------------------------------|----|
-| **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
+| **RefNo**                     | String  | 19  | Transaction RefNo to Capture  | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
 | **Amount** <sup>1</sup>       | String  | 8   | Updated Transaction Amount    | Body |
 | **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
