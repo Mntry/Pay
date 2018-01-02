@@ -20,6 +20,7 @@
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
+| Trace                         | String  | 40  | Echoed in Response             | Body |
 
 <br />
 
@@ -36,6 +37,7 @@
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
+| Trace                         | String  | 40  | Echoed in Response             | Body |
 
 <br />
 
@@ -54,6 +56,7 @@ Debit transaction response bodies will include the following fields:
 | Authorized    | String  | 8   | Amount Authorized                     |
 | InvoiceNo     | String  | 10  | Echoed Unique Transaction Identifier  |
 | RefNo <sup>3</sup>        | String  | 10  | Transaction Reference Number          |
+| Trace                         | String  | 40  | Echoed from Request   |
 
 <sup>1</sup> `Status` values: `Approved`, `Declined`, `Success`, or `Error`<br />
 <sup>2</sup> `Brand` values: `Debit`<br />
