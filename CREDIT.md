@@ -58,6 +58,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | AuthCode  <sup>5</sup>        | String  | 16  | Voice Authorization Code       | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
+| Trace                         | String  | 40  | Echoed in Response             | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
@@ -76,6 +77,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
+| Trace                         | String  | 40  | Echoed in Response             | Body |
 
 <br />
 
@@ -91,6 +93,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Amount** <sup>1</sup>       | String  | 8   | Updated Transaction Amount    | Body |
 | **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
+| Trace                         | String  | 40  | Echoed in Response             | Body |
 
 <sup>1</sup> Include either of these fields.
 <br />
@@ -113,6 +116,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Amount**                    | String  | 8   | Transaction Amount            | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
+| Trace                         | String  | 40  | Echoed in Response             | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
@@ -130,6 +134,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 |-------------------------------|---------|-----|-------------------------------|----|
 | **RefNo**                     | String  | 19  | Transaction RefNo to Void     | URL  |
 | **Token**                     | String  | 20  | Monetary Token                | Body |
+| Trace                         | String  | 40  | Echoed in Response             | Body |
 <br />
 
 ## PreAuth
@@ -152,6 +157,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
 | AuthCode  <sup>5</sup>        | String  | 16  | Voice Authorization Code       | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
+| Trace                         | String  | 40  | Echoed in Response             | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
@@ -167,12 +173,13 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 
 ### Request Fields (**bold** fields required)
 | Field                         | Type    | Max Length  | Description                   | Location |
-|-------------------------------|---------|-----|-------------------------------|----|
-| **RefNo**                     | String  | 19  | Transaction RefNo to Capture  | URL  |
-| **Token**                     | String  | 20  | Monetary Token                | Body |
-| **Amount** <sup>1</sup>       | String  | 8   | Updated Transaction Amount    | Body |
-| **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount     | Body |
-| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction| Body |
+|-------------------------------|---------|-----|--------------------------------|----|
+| **RefNo**                     | String  | 19  | Transaction RefNo to Capture   | URL  |
+| **Token**                     | String  | 20  | Monetary Token                 | Body |
+| **Amount** <sup>1</sup>       | String  | 8   | Updated Transaction Amount     | Body |
+| **Tip** <sup>1</sup>          | String  | 8   | New or Updated Tip Amount      | Body |
+| OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
+| Trace                         | String  | 40  | Echoed in Response             | Body |
 
 <sup>1</sup> Include either or both of these fields.
 
@@ -197,6 +204,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
 | AuthCode  <sup>6</sup>        | String  | 16  | Voice Authorization Code      | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
+| Trace                         | String  | 40  | Echoed in Response             | Body |
 
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
@@ -240,6 +248,7 @@ Credit transaction response bodies will include the following fields:
 | InvoiceNo     | String  | 10  | Echoed Unique Transaction Identifier  |
 | RefNo <sup>3</sup>        | String  | 19  | Transaction Reference Number          |
 | Token         | String  | 15 | Account Token                          |
+| Trace                         | String  | 40  | Echoed from Request   |
 
 <sup>1</sup> `Status` values: `Approved`, `Declined`, `Success`, or `Error`<br />
 <sup>2</sup> `Brand` values: `VISA`, `M/C`, `DCVR`, `AMEX`, `DCLB`, `JCB`, or `OTHER`<br />
