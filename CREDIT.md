@@ -53,10 +53,11 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                 | Body |
 | **AccountKey** <sup>4</sup>   | String  | 20  | Account Encryption Key         | Body |
 | **EncryptedAccount** <sup>4</sup>| String | 224 | Encrypted Account Data Block | Body |
+| **EMVData** <sup>5</sup>      | String  | 255  | EMV Data in Hexadecimal Format | Body |
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | Tip                           | String  | 8   | Tip Amount                     | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
-| AuthCode  <sup>5</sup>        | String  | 16  | Voice Authorization Code       | Body |
+| AuthCode  <sup>6</sup>        | String  | 16  | Voice Authorization Code       | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 | Trace                         | String  | 40  | Echoed in Response             | Body |
 
@@ -64,7 +65,8 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
 <sup>4</sup> Include these fields for encrypted account information.<br />
-<sup>5</sup> Include this field for authorizations obtained from the voice authorization center.
+<sup>5</sup> Include this field for EMV QuickChip account information.<br />
+<sup>6</sup> Include this field for authorizations obtained from the voice authorization center.
 
 <br />
 
@@ -113,6 +115,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
 | **AccountKey** <sup>4</sup>   | String  | 20  | Account Encryption Key         | Body |
 | **EncryptedAccount** <sup>4</sup>| String | 224 | Encrypted Account Data Block | Body |
+| **EMVData**    <sup>5</sup>   | String  | 255  | EMV Data in Hexadecimal Format | Body |
 | **Amount**                    | String  | 8   | Transaction Amount            | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
@@ -122,6 +125,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
 <sup>4</sup> Include these fields for encrypted account information.
+<sup>5</sup> Include this field for EMV QuickChip account information.
 
 <br />
 
@@ -152,10 +156,11 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                 | Body |
 | **AccountKey** <sup>4</sup>   | String  | 20  | Account Encryption Key         | Body |
 | **EncryptedAccount** <sup>4</sup>| String | 224 | Encrypted Account Data Block | Body |
+| **EMVData**    <sup>5</sup>   | String  | 255  | EMV Data in Hexadecimal Format | Body |
 | **Amount**                    | String  | 8   | Transaction Amount             | Body |
 | Tip                           | String  | 8   | Tip Amount                     | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier  | Body |
-| AuthCode  <sup>5</sup>        | String  | 16  | Voice Authorization Code       | Body |
+| AuthCode  <sup>6</sup>        | String  | 16  | Voice Authorization Code       | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 | Trace                         | String  | 40  | Echoed in Response             | Body |
 
@@ -163,7 +168,8 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
 <sup>4</sup> Include these fields for encrypted account information.<br />
-<sup>5</sup> Include this field for authorizations obtained from the voice authorization center.
+<sup>5</sup> Include this field for EMV QuickChip account information.<br />
+<sup>6</sup> Include this field for authorizations obtained from the voice authorization center.
 
 <br />
 
@@ -200,9 +206,10 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 | **Token** <sup>3</sup>        | String  | 20  | Monetary Token                | Body |
 | **AccountKey** <sup>4</sup>   | String  | 20  | Account Encryption Key         | Body |
 | **EncryptedAccount** <sup>4</sup>| String | 224 | Encrypted Account Data Block | Body |
-| **Amount** <sup>5</sup>       | String  | 8   | Transaction Amount            | Body |
+| **EMVData**    <sup>5</sup>   | String  | 255  | EMV Data in Hexadecimal Format | Body |
+| **Amount** <sup>6</sup>       | String  | 8   | Transaction Amount            | Body |
 | InvoiceNo                     | String  | 10  | Unique Transaction Identifier | Body |
-| AuthCode  <sup>6</sup>        | String  | 16  | Voice Authorization Code      | Body |
+| AuthCode  <sup>7</sup>        | String  | 16  | Voice Authorization Code      | Body |
 | OverrideDuplicate             | Boolean |     | Override Duplicate Transaction | Body |
 | Trace                         | String  | 40  | Echoed in Response             | Body |
 
@@ -210,8 +217,9 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
 <sup>4</sup> Include these fields for encrypted account information.<br />
-<sup>5</sup> `Amount` value may be `0.00` for a zero-dollar (card verification) authorization.<br />
-<sup>6</sup> Include this field for authorizations obtained from the voice authorization center.
+<sup>5</sup> Include this field for EMV QuickChip account information.<br />
+<sup>6</sup> `Amount` value may be `0.00` for a zero-dollar (card verification) authorization.<br />
+<sup>7</sup> Include this field for authorizations obtained from the voice authorization center.
 
 <br />
 
