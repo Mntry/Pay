@@ -124,7 +124,7 @@ Depending on the merchant's processor, a subset of available Monetary transactio
 <sup>1</sup> Include these fields for manually entered account information.<br />
 <sup>2</sup> Include this field for swiped account information.<br />
 <sup>3</sup> Include this field for tokenized card information.<br />
-<sup>4</sup> Include these fields for encrypted account information.
+<sup>4</sup> Include these fields for encrypted account information.<br />
 <sup>5</sup> Include this field for EMV QuickChip account information.
 
 <br />
