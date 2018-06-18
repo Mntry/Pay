@@ -3,9 +3,6 @@
 ### Supported Transactions Request
 * [Supported Transactions](#supported-transactions)
 
-### Duplicate Checking
-* [Duplicate Checking Behavior](#duplicate-checking)
-
 ### Credit Transaction Requests
 * [Sale](#sale)
 * [Void Sale](#void-sale)
@@ -21,6 +18,9 @@
 
 ### Credit Transaction Responses
 * [Response Fields](#response-fields)
+
+### Duplicate Checking
+* [Duplicate Checking Behavior](#duplicate-checking)
 
 ## Supported Transactions
 Depending on the merchant's processor, a subset of available Monetary transactions may be unavailable. This endpoint will report the processor's supported status of each transaction for the provided merchant secret key.
