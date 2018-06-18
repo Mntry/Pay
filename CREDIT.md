@@ -266,3 +266,6 @@ Monetary's payment gateway implements standard duplicate checking logic to help 
 * Amount
 
 When a duplicate transaction request is detected, the response returned will be that of the original transaction to which the duplicate transaction matched. Detection of duplicate transactions by the integrator is possible by matching the returned `RefNo` to a to a previous transaction on the client-side.
+
+#### Force Duplicate
+In the event that you want to force a duplicate transaction to process as a new transaction, pass the `OverrideDuplicate` request field with the value `true` and the duplicate checking will be skipped.
