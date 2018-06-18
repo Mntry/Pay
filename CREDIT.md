@@ -25,16 +25,6 @@
 ## Supported Transactions
 Depending on the merchant's processor, a subset of available Monetary transactions may be unavailable. This endpoint will report the processor's supported status of each transaction for the provided merchant secret key.
 
-## Duplicate Checking
-Monetary's payment gateway implements standard duplicate checking logic to help avoid multiple accidental charges against a customer's card. Duplicate transactions are detected based on the following request fields matching a transaction which previously approved within the last 24 hours;
-* MID (secret key)
-* Transaction Type
-* Account
-* Invoice
-* Amount
-
-When a duplicate transaction request is detected, the response returned will be that of the original transaction to which the duplicate transaction matched. Detection of duplicate transactions by the integrator is possible by matching the returned `RefNo` to a to a previous transaction on the client-side.
-
 `GET` /credit
 
 ### Supported Transactions Response Fields
@@ -266,3 +256,13 @@ Credit transaction response bodies will include the following fields:
 <sup>1</sup> `Status` values: `Approved`, `Declined`, `Success`, or `Error`<br />
 <sup>2</sup> `Brand` values: `VISA`, `M/C`, `DCVR`, `AMEX`, `DCLB`, `JCB`, or `OTHER`<br />
 <sup>3</sup> Store `RefNo` value for follow-up transaction use.
+
+## Duplicate Checking
+Monetary's payment gateway implements standard duplicate checking logic to help avoid multiple accidental charges against a customer's card. Duplicate transactions are detected based on the following request fields matching a transaction which previously approved within the last 24 hours;
+* MID (secret key)
+* Transaction Type
+* Account
+* Invoice
+* Amount
+
+When a duplicate transaction request is detected, the response returned will be that of the original transaction to which the duplicate transaction matched. Detection of duplicate transactions by the integrator is possible by matching the returned `RefNo` to a to a previous transaction on the client-side.
